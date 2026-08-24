@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal da Turma - Dev Web</title>
+  <style>
+    /* Estilos Gerais da Página */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: linear-gradient(135deg, rgb(218, 224, 214), rgb(236, 243, 231));
+      color: #333333;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Cabeçalho Topo */
+    header {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      color: #ffffff;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2em;
+    }
+
+    /* Menu de Navegação */
+    nav {
+      background-color: #0f2027;
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: inline-block;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #00c6ff;
+      color: #000000;
+      border-radius: 4px;
+    }
+
+    /* Conteúdo Principal */
+    .container {
+      display: flex;
+      flex: 1;
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .welcome-card {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      margin-bottom: 25px;
+      border-left: 6px solid #2a5298;
+    }
+
+    /* Grid de Recursos / Seções */
+    .cards-grid {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    .card-item {
+      display: table-cell;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      vertical-align: top;
+    }
+
+    .card-item+.card-item {
+      padding-left: 20px;
+    }
+
+    /* Rodapé */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1e293b;
+      color: #94a3b8;
+      margin-top: 40px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>🚀 Portal de Desenvolvimento Web</h1>
+    <p>UniMetrocamp Wyden - Turma de HTML5 & CSS3</p>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="pagina0.html">Mini Currículo</a>
+    <a href="pagina1.html">Hospedagem</a>
+    <a href="pagina2.html">Galeria de Projetos</a>
+  </nav>
+  <div class="container">
+    <div class="welcome-card">
+      <h2 style="color:#1e3c72; margin-top:0;">Bem-vindo ao Nosso Portal Prático!</h2>
+      <p>Este roteiro foi projetado para elevar o nível estético e estrutural das nossas páginas web.
+        Explore as seções do portal para verificar a evolução do uso de CSS, layouts responsivos e novos
+        elementos interativos.</p>
+    </div>
+    <div class="cards-grid">
+      <div class="card-item" style="background-color: #ffffff; margin-right: 10px; border: 1px solid#e2e8f0; border-radius:6px;">
+        <h3 style="color:#2a5298;">📘 Aula 01 - Fundamentos</h3>
+        <p>Estrutura básica de tags HTML, uso do Bloco de Notas e publicação estática via Netlify.</p>
+        <a href="pagina0.html" style="color: #0077cc; font-weight: bold;">Ver Currículo &rarr;</a>
+      </div>
+      <div class="card-item" style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius:6px;">
+
+        <h3 style="color:#2a5298;"> Aula 02 - Design & CSS</h3>
+        <p>Estilização com CSS3, conceitos de box model, cores modernas, tipografia e novos componentes
+          visualmente atraentes.</p>
+        <a href="pagina2.html" style="color: #0077cc; font-weight: bold;">Ver Galeria &rarr;</a>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2026 UniMetrocamp Wyden - Prof. Leonardo Ramos de Oliveira. Todos os direitos
+      reservados.</p>
+  </footer>
+</body>
+
+</html>
