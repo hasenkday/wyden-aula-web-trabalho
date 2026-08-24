@@ -5,106 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portal da Turma - Dev Web</title>
-  <style>
-    /* Estilos Gerais da Página */
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-image: linear-gradient(135deg, rgb(218, 224, 214), rgb(236, 243, 231));
-      color: #333333;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Cabeçalho Topo */
-    header {
-      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-      color: #ffffff;
-      padding: 25px 20px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.2em;
-    }
-
-    /* Menu de Navegação */
-    nav {
-      background-color: #0f2027;
-      display: block;
-      text-align: center;
-      padding: 10px 0;
-    }
-
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
-      padding: 10px 20px;
-      display: inline-block;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      background-color: #00c6ff;
-      color: #000000;
-      border-radius: 4px;
-    }
-
-    /* Conteúdo Principal */
-    .container {
-      display: flex;
-      flex: 1;
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .welcome-card {
-      background-color: #ffffff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      margin-bottom: 25px;
-      border-left: 6px solid #2a5298;
-    }
-
-    /* Grid de Recursos / Seções */
-    .cards-grid {
-      display: table;
-      width: 100%;
-      table-layout: fixed;
-    }
-
-    .card-item {
-      display: table-cell;
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-      vertical-align: top;
-    }
-
-    .card-item+.card-item {
-      padding-left: 20px;
-    }
-
-    /* Rodapé */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1e293b;
-      color: #94a3b8;
-      margin-top: 40px;
-      font-size: 0.9em;
-    }
-  </style>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body>
@@ -112,38 +13,155 @@
     <h1>🚀 Portal de Desenvolvimento Web</h1>
     <p>UniMetrocamp Wyden - Turma de HTML5 & CSS3</p>
   </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="pagina0.html">Mini Currículo</a>
     <a href="pagina1.html">Hospedagem</a>
     <a href="pagina2.html">Galeria de Projetos</a>
   </nav>
-  <div class="container">
-    <div class="welcome-card">
-      <h2 style="color:#1e3c72; margin-top:0;">Bem-vindo ao Nosso Portal Prático!</h2>
-      <p>Este roteiro foi projetado para elevar o nível estético e estrutural das nossas páginas web.
-        Explore as seções do portal para verificar a evolução do uso de CSS, layouts responsivos e novos
-        elementos interativos.</p>
-    </div>
-    <div class="cards-grid">
-      <div class="card-item" style="background-color: #ffffff; margin-right: 10px; border: 1px solid#e2e8f0; border-radius:6px;">
-        <h3 style="color:#2a5298;">📘 Aula 01 - Fundamentos</h3>
-        <p>Estrutura básica de tags HTML, uso do Bloco de Notas e publicação estática via Netlify.</p>
-        <a href="pagina0.html" style="color: #0077cc; font-weight: bold;">Ver Currículo &rarr;</a>
-      </div>
-      <div class="card-item" style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius:6px;">
 
-        <h3 style="color:#2a5298;"> Aula 02 - Design & CSS</h3>
-        <p>Estilização com CSS3, conceitos de box model, cores modernas, tipografia e novos componentes
-          visualmente atraentes.</p>
-        <a href="pagina2.html" style="color: #0077cc; font-weight: bold;">Ver Galeria &rarr;</a>
+  <div class="container my-xl px-lg">
+    <div class="welcome-card">
+      <h2>Bem-vindo ao Nosso Portal Prático!</h2>
+      <p>
+        Este roteiro foi projetado para elevar o nível estético e estrutural das nossas páginas web.
+        Explore as seções do portal para verificar a evolução do uso de CSS, layouts responsivos e novos
+        elementos interativos.
+      </p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card-item">
+        <h3>📘 Aula 01 - Fundamentos</h3>
+        <p>Estrutura básica de tags HTML, uso do Bloco de Notas e publicação estática via Netlify.</p>
+        <a href="pagina0.html">Ver Currículo &rarr;</a>
+      </div>
+
+      <div class="card-item">
+        <h3>Aula 02 - Design & CSS</h3>
+        <p>
+          Estilização com CSS3, conceitos de box model, cores modernas, tipografia e novos componentes
+          visualmente atraentes.
+        </p>
+        <a href="pagina2.html">Ver Galeria &rarr;</a>
       </div>
     </div>
   </div>
+
   <footer>
-    <p>&copy; 2026 UniMetrocamp Wyden - Prof. Leonardo Ramos de Oliveira. Todos os direitos
-      reservados.</p>
+    <p>
+      &copy; 2026 UniMetrocamp Wyden - Prof. Leonardo Ramos de Oliveira.
+      Todos os direitos reservados.
+    </p>
   </footer>
+
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(
+        135deg,
+        var(--color-primary-500),
+        var(--color-primary-400)
+      );
+      color: var(--color-surface);
+      padding: var(--space-lg) var(--space-md);
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+
+    header h1 {
+      margin-bottom: var(--space-xs);
+      color: inherit;
+    }
+
+    header p {
+      margin-bottom: 0;
+    }
+
+    nav {
+      background-color: var(--color-neutral-500);
+      display: block;
+      text-align: center;
+      padding-block: var(--space-xs);
+    }
+
+    nav a {
+      color: var(--color-surface);
+      text-decoration: none;
+      padding: var(--space-xs) var(--space-lg);
+      display: inline-block;
+      font-weight: var(--font-weight-bold);
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background-color: var(--color-primary-200);
+      color: var(--color-neutral-500);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+    }
+
+    .container {
+      display: flex;
+      flex: 1;
+      max-width: 900px;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .welcome-card {
+      background-color: var(--color-surface);
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: var(--space-lg);
+      border-left: 6px solid var(--color-primary-400);
+    }
+
+    .cards-grid {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+      border-spacing: var(--space-sm) 0;
+    }
+
+    .card-item {
+      display: table-cell;
+      background-color: var(--color-surface);
+      padding: var(--space-lg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      vertical-align: top;
+    }
+
+    .card-item h3 {
+      color: var(--color-primary-400);
+    }
+
+    .card-item a {
+      font-weight: var(--font-weight-bold);
+    }
+
+    footer {
+      text-align: center;
+      padding: var(--space-lg);
+      background-color: var(--color-neutral-500);
+      color: var(--color-neutral-300);
+      margin-top: var(--space-xl);
+      font-size: var(--font-size-sm);
+    }
+
+    footer p {
+      margin-bottom: 0;
+    }
+  </style>
 </body>
 
 </html>

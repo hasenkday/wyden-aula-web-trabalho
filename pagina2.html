@@ -2,151 +2,181 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Galeria & Contato</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-image: linear-gradient(135deg, rgb(218, 224, 214), rgb(236, 243, 231));
-            margin: 0;
-            padding: 20px;
-            color: #1e293b;
-        }
-
-        .wrapper {
-            max-width: 850px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        h1 {
-            color: #0f172a;
-            border-bottom: 2px solid #3b82f6;
-            padding-bottom: 8px;
-        }
-
-        /* Tabela Estilizada */
-        .styled-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 0.95em;
-        }
-
-        .styled-table thead tr {
-            background-color: #2563eb;
-            color: #ffffff;
-            text-align: left;
-        }
-
-        .styled-table th,
-        .styled-table td {
-            padding: 12px 15px;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .styled-table tbody tr:hover {
-            background-color: #f1f5f9;
-        }
-
-        /* Formulário Estilizado */
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
-            color: #475569;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #cbd5e1;
-            border-radius: 5px;
-            box-sizing: border-box;
-            font-family: inherit;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #2563eb;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-        }
-
-        .btn-submit {
-            background-color: #16a34a;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 5px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        .btn-submit:hover {
-            background-color: #15803d;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria & Contato</title>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<body>
-    <div class="wrapper">
-        <h1> Galeria de Projetos & Contato</h1>
-        <h2 style="color: #1d4ed8; font-size: 1.2em;">Projetos Desenvolvidos na Disciplina</h2>
-        <table class="styled-table">
-            <thead>
-                <tr>
-                    <th>Projeto</th>
-                    <th>Tecnologias</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Mini Currículo Estático</td>
-                    <td>HTML5, CSS Base</td>
-                    <td style="color: green; font-weight: bold;">Concluído</td>
-                </tr>
-                <tr>
-                    <td>Portal da Turma Responsivo</td>
-                    <td>HTML5, CSS Internal, Flex Layout</td>
-                    <td style="color: #d97706; font-weight: bold;">Em Progresso</td>
-                </tr>
-                <tr>
-                    <td>Formulário de Feedback</td>
-                    <td>HTML5 Form Tags, Custom CSS</td>
-                    <td style="color: green; font-weight: bold;">Concluído</td>
-                </tr>
-            </tbody>
-        </table>
-        <h2 style="color: #1d4ed8; font-size: 1.2em; margin-top: 30px;">Entre em Contato com a Equipe</h2>
-        <form onsubmit="alert('Mensagem enviada com sucesso! (Simulação)'); return false;">
-            <div class="form-group">
-                <label for="nome">Seu Nome:</label>
-                <input type="text" id="nome" placeholder="Digite seu nome completo" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Seu E-mail:</label>
-                <input type="email" id="email" placeholder="nome@exemplo.com" required>
-            </div>
-            <div class="form-group">
-                <label for="mensagem">Mensagem ou Sugestão:</label>
-                <textarea id="mensagem" rows="4" placeholder="Escreva sua mensagem aqui..." required>
-                        </textarea>
-            </div>
-            <button type="submit" class="btn-submit">Enviar Mensagem</button>
-        </form>
-        <br>
-        <p><a href="index.html" style="color: #2563eb; font-weight: bold;">&larr; Voltar para a Home</a></p>
-    </div>
+<body class="p-lg">
+  <div class="wrapper">
+    <h1>Galeria de Projetos & Contato</h1>
+
+    <h2 class="section-heading">Projetos Desenvolvidos na Disciplina</h2>
+
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th>Projeto</th>
+          <th>Tecnologias</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Mini Currículo Estático</td>
+          <td>HTML5, CSS Base</td>
+          <td class="status status--success">Concluído</td>
+        </tr>
+
+        <tr>
+          <td>Portal da Turma Responsivo</td>
+          <td>HTML5, CSS Internal, Flex Layout</td>
+          <td class="status status--warning">Em Progresso</td>
+        </tr>
+
+        <tr>
+          <td>Formulário de Feedback</td>
+          <td>HTML5 Form Tags, Custom CSS</td>
+          <td class="status status--success">Concluído</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 class="section-heading mt-xl">Entre em Contato com a Equipe</h2>
+
+    <form onsubmit="alert('Mensagem enviada com sucesso! (Simulação)'); return false;">
+      <div class="form-group">
+        <label for="nome">Seu Nome:</label>
+        <input type="text" id="nome" placeholder="Digite seu nome completo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Seu E-mail:</label>
+        <input type="email" id="email" placeholder="nome@exemplo.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mensagem">Mensagem ou Sugestão:</label>
+        <textarea
+          id="mensagem"
+          rows="4"
+          placeholder="Escreva sua mensagem aqui..."
+          required
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Enviar Mensagem</button>
+    </form>
+
+    <br>
+
+    <p>
+      <a href="index.html" class="back-link">&larr; Voltar para a Home</a>
+    </p>
+  </div>
+
+  <style>
+    .wrapper {
+      max-width: 850px;
+      margin-inline: auto;
+      background-color: var(--color-surface);
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+    }
+
+    .wrapper > h1 {
+      border-bottom: 2px solid var(--color-info-300);
+      padding-bottom: var(--space-xs);
+    }
+
+    .section-heading {
+      color: var(--color-info-400);
+      font-size: var(--font-size-lg);
+    }
+
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-block: var(--space-lg);
+      font-size: var(--font-size-sm);
+    }
+
+    .styled-table thead tr {
+      background-color: var(--color-info-400);
+      color: var(--color-surface);
+      text-align: left;
+    }
+
+    .styled-table th,
+    .styled-table td {
+      padding: var(--space-sm) var(--space-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .styled-table tbody tr:hover {
+      background-color: var(--color-neutral-100);
+    }
+
+    .status {
+      font-weight: var(--font-weight-bold);
+    }
+
+    .status--success {
+      color: var(--color-success-400);
+    }
+
+    .status--warning {
+      color: var(--color-warning-400);
+    }
+
+    .form-group {
+      margin-bottom: var(--space-md);
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: var(--space-2xs);
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-muted);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: var(--space-xs);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      font-family: inherit;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--color-focus);
+      box-shadow: 0 0 0 3px rgb(49 130 206 / 20%);
+    }
+
+    .btn-submit {
+      background-color: var(--color-success-400);
+      color: var(--color-surface);
+      border: none;
+      padding: var(--space-sm) var(--space-lg);
+      border-radius: var(--radius-md);
+      font-weight: var(--font-weight-bold);
+      cursor: pointer;
+    }
+
+    .btn-submit:hover {
+      background-color: var(--color-success-500);
+    }
+
+    .back-link {
+      font-weight: var(--font-weight-bold);
+    }
+  </style>
 </body>
 
 </html>

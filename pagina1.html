@@ -2,49 +2,49 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <title>AULA WEB - HOSPEDAGEM DE SITE</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AULA WEB - HOSPEDAGEM DE SITE</title>
+  <link rel="stylesheet" href="styles/main.css">
 </head>
 
-<body>
-    <h1>🚀 AULA WEB - HOSPEDAGEM DE SITE</h1>
-    <p>Bem-vindo(a) ao mundo dos <span class="destaque">sites mágicos!</span></p>
-    <p>Hoje usamos o <strong>Netlify</strong> para hospedar este site!</p>
-    <p>É leve, rápido e divertido! 😄</p>
-    <script>
-        document.body.innerHTML += "<p><em>Criado pelos Alunos/Alunas usando Bloco de Notas!</em></p>";
-    </script>
-    <br>
-    <p><a href="index.html">Voltar para Home</a></p>
-</body>
+<body class="px-lg py-xl">
+  <h1>🚀 AULA WEB - HOSPEDAGEM DE SITE</h1>
 
-<style>
-    * {
-        font-family: Arial, Helvetica, sans-serif;
-    }
+  <p>Bem-vindo(a) ao mundo dos <span class="destaque">sites mágicos!</span></p>
+  <p>Hoje usamos o <strong>Netlify</strong> para hospedar este site!</p>
+  <p>É leve, rápido e divertido! 😄</p>
 
+  <script>
+    document.body.innerHTML += "<p><em>Criado pelos Alunos/Alunas usando Bloco de Notas!</em></p>";
+  </script>
+
+  <br>
+
+  <p>
+    <a href="index.html">Voltar para Home</a>
+  </p>
+
+  <style>
     html {
-        display: flex;
-        justify-content: center;
-    }
-
-    h1 {
-        color: #0077cc;
+      display: flex;
+      justify-content: center;
     }
 
     body {
-        min-height: 100vh;
-        max-width: 100vw;
-        width: 50rem;
-        margin: 0;
-        padding: 3rem 2.5rem;
-        background-image: linear-gradient(135deg, rgb(218, 224, 214), rgb(236, 243, 231));
+      width: min(50rem, 100%);
+      max-width: 100vw;
+    }
+
+    h1 {
+      color: var(--color-primary-400);
     }
 
     .destaque {
-        font-weight: bold;
-        color: green;
+      font-weight: var(--font-weight-bold);
+      color: var(--color-success-400);
     }
-</style>
+  </style>
+</body>
 
 </html>
