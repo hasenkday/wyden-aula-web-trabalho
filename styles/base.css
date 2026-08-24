@@ -22,7 +22,6 @@ body {
   background: var(--page-background);
 }
 
-
 /* ----- Typography ----- */
 
 h1,
@@ -68,7 +67,6 @@ p {
 small {
   font-size: var(--font-size-sm);
 }
-
 
 /* ----- Links ----- */
 

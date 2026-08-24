@@ -24,7 +24,6 @@
   margin: var(--space-xl);
 }
 
-
 /* Margin top */
 
 .mt-0 {
@@ -50,7 +49,6 @@
 .mt-xl {
   margin-top: var(--space-xl);
 }
-
 
 /* Margin bottom */
 
@@ -78,7 +76,6 @@
   margin-bottom: var(--space-xl);
 }
 
-
 /* Margin inline */
 
 .mx-auto {
@@ -89,7 +86,6 @@
   margin-inline: var(--space-md);
 }
 
-
 /* Margin block */
 
 .my-md {
@@ -99,7 +95,6 @@
 .my-lg {
   margin-block: var(--space-lg);
 }
-
 
 /* Padding */
 
@@ -127,7 +122,6 @@
   padding: var(--space-xl);
 }
 
-
 /* Padding inline */
 
 .px-sm {
@@ -141,7 +135,6 @@
 .px-lg {
   padding-inline: var(--space-lg);
 }
-
 
 /* Padding block */
 

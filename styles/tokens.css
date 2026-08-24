@@ -7,7 +7,6 @@
   --color-neutral-400: #475569;
   --color-neutral-500: #0f172a;
 
-
   /* ----- Colors: Primary ----- */
 
   --color-primary-100: #ebf8ff;
@@ -15,7 +14,6 @@
   --color-primary-300: #3182ce;
   --color-primary-400: #2b6cb0;
   --color-primary-500: #1a365d;
-
 
   /* ----- Colors: Secondary ----- */
 
@@ -25,7 +23,6 @@
   --color-secondary-400: #55783f;
   --color-secondary-500: #2f4a25;
 
-
   /* ----- Support: Success ----- */
 
   --color-success-100: #f0fdf4;
@@ -33,7 +30,6 @@
   --color-success-300: #4ade80;
   --color-success-400: #16a34a;
   --color-success-500: #14532d;
-
 
   /* ----- Support: Danger ----- */
 
@@ -43,7 +39,6 @@
   --color-danger-400: #dc2626;
   --color-danger-500: #7f1d1d;
 
-
   /* ----- Support: Info ----- */
 
   --color-info-100: #eff6ff;
@@ -52,7 +47,6 @@
   --color-info-400: #2563eb;
   --color-info-500: #1e3a8a;
 
-
   /* ----- Support: Warning ----- */
 
   --color-warning-100: #fffbeb;
@@ -60,8 +54,6 @@
   --color-warning-300: #fbbf24;
   --color-warning-400: #d97706;
   --color-warning-500: #78350f;
-
-
 
   /* ------------------------------
    * Semantic colors 
@@ -80,15 +72,9 @@
 
   --color-focus: var(--color-primary-300);
 
-
   /* ----- Typography ----- */
 
-  --font-family-base:
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  --font-family-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --font-size-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.875rem);
   --font-size-sm: clamp(0.875rem, 0.84rem + 0.18vw, 1rem);
@@ -106,7 +92,6 @@
   --line-height-base: 1.5;
   --line-height-relaxed: 1.6;
 
-
   /* ----- Spacing ----- */
 
   --space-2xs: 0.25rem;
@@ -117,14 +102,12 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
 
-
-/* ----- Radius ----- */
+  /* ----- Radius ----- */
 
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.75rem;
   --radius-pill: 999rem;
-
 
   /* ----- Shadows ----- */
 
@@ -132,13 +115,7 @@
   --shadow-md: 0 4px 12px rgb(0 0 0 / 8%);
   --shadow-lg: 0 4px 15px rgb(0 0 0 / 12%);
 
-
   /* ----- Page ----- */
 
-  --page-background:
-    linear-gradient(
-      135deg,
-      rgb(218 224 214),
-      rgb(236 243 231)
-    );
+  --page-background: linear-gradient(135deg, rgb(218 224 214), rgb(236 243 231));
 }
