@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AULA WEB - HOSPEDAGEM DE SITE</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <script src="./components/organisms/header-nav/header-nav.js"></script>
   </head>
 
-  <body class="px-lg py-xl">
+  <body>
+    <div id="header-nav"></div>
+
     <h1>🚀 AULA WEB - HOSPEDAGEM DE SITE</h1>
 
     <p>Bem-vindo(a) ao mundo dos <span class="destaque">sites mágicos!</span></p>
@@ -24,6 +27,14 @@
     <p>
       <a href="index.html">Voltar para Home</a>
     </p>
+
+    <script>
+      function renderAll() {
+        document.querySelector('#header-nav').innerHTML = HeaderNav();
+      }
+
+      renderAll();
+    </script>
 
     <style>
       html {

@@ -3,3 +3,5 @@
 @import url('./utilities.css');
 
 @import url('../components/atoms/badge/badge.css');
+
+@import url('../components/organisms/header-nav/header-nav.css');

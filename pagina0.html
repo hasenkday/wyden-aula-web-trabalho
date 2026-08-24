@@ -8,9 +8,12 @@
 
     <link rel="stylesheet" href="styles/main.css" />
     <script src="./components/atoms/badge/badge.js"></script>
+    <script src="./components/organisms/header-nav/header-nav.js"></script>
   </head>
 
-  <body class="p-lg">
+  <body>
+    <div id="header-nav"></div>
+
     <div class="cv-card">
       <div class="cv-header">
         <h1>Nadia Hassegawa Kavashima</h1>
@@ -133,6 +136,12 @@
     </div>
 
     <script>
+      function renderAll() {
+        document.querySelector('#header-nav').innerHTML = HeaderNav();
+      }
+
+      renderAll();
+
       function renderBadges(targetId, items) {
         const target = document.querySelector(`#${targetId}`);
 
@@ -174,6 +183,23 @@
     </script>
 
     <style>
+      .cv-header {
+        padding-bottom: var(--space-md);
+        margin-bottom: var(--space-lg);
+        border-bottom: 2px solid var(--color-primary-400);
+      }
+
+      .cv-header h1 {
+        margin-bottom: var(--space-2xs);
+        color: var(--color-primary-400);
+      }
+
+      .cv-header p {
+        margin-bottom: 0;
+        color: var(--color-text-muted);
+        font-weight: var(--font-weight-semibold);
+      }
+
       .cv-card {
         max-width: 750px;
 
@@ -186,28 +212,6 @@
         border-radius: var(--radius-lg);
 
         box-shadow: var(--shadow-lg);
-      }
-
-      .cv-header {
-        padding-bottom: var(--space-md);
-
-        margin-bottom: var(--space-lg);
-
-        border-bottom: 2px solid var(--color-primary-400);
-      }
-
-      .cv-header h1 {
-        margin-bottom: var(--space-2xs);
-
-        color: var(--color-primary-400);
-      }
-
-      .cv-header p {
-        margin-bottom: 0;
-
-        color: var(--color-text-muted);
-
-        font-weight: var(--font-weight-semibold);
       }
 
       .section-title {
