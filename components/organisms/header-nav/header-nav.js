@@ -8,9 +8,9 @@ function HeaderNav() {
 
         <nav>
             <a href="index.html">Home</a>
-            <a href="pagina0.html">Mini Currículo</a>
-            <a href="pagina1.html">Hospedagem</a>
-            <a href="pagina2.html">Galeria de Projetos</a>
+            <a href="curriculo.html">Mini Currículo</a>
+            <a href="hospedagem.html">Hospedagem</a>
+            <a href="galeria.html">Galeria de Projetos</a>
         </nav>
     </div>
   `;

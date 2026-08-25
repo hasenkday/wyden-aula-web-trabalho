@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galeria & Contato</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <script src="./components/organisms/header-nav/header-nav.js"></script>
   </head>
 
-  <body class="p-lg">
+  <body>
+    <div id="header-nav"></div>
+
     <div class="wrapper">
       <h1>Galeria de Projetos & Contato</h1>
 
@@ -81,7 +84,13 @@
       </p>
     </div>
 
-    <script
+    <script>
+      function renderAll() {
+        document.querySelector('#header-nav').innerHTML = HeaderNav();
+      }
+
+      renderAll();
+    </script>
 
     <style>
       .wrapper {
