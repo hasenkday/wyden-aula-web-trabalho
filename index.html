@@ -13,32 +13,35 @@
   <body>
     <div id="header-nav"></div>
 
-    <div class="container my-xl px-lg">
-      <div class="welcome-card">
-        <h2>Bem-vindo ao Nosso Portal Prático!</h2>
-        <p>
-          Este roteiro foi projetado para elevar o nível estético e estrutural das nossas páginas
-          web. Explore as seções do portal para verificar a evolução do uso de CSS, layouts
-          responsivos e novos elementos interativos.
-        </p>
-      </div>
-
-      <div class="cards-grid">
-        <div class="card-item">
-          <h3>📘 Aula 01 - Fundamentos</h3>
+    <div class="content">
+      <div class="container">
+        <div class="welcome-card">
+          <h2>Bem-vindo ao Nosso Portal Prático!</h2>
           <p>
-            Estrutura básica de tags HTML, uso do Bloco de Notas e publicação estática via Netlify.
+            Este roteiro foi projetado para elevar o nível estético e estrutural das nossas páginas
+            web. Explore as seções do portal para verificar a evolução do uso de CSS, layouts
+            responsivos e novos elementos interativos.
           </p>
-          <a href="pagina0.html">Ver Currículo &rarr;</a>
         </div>
 
-        <div class="card-item">
-          <h3>Aula 02 - Design & CSS</h3>
-          <p>
-            Estilização com CSS3, conceitos de box model, cores modernas, tipografia e novos
-            componentes visualmente atraentes.
-          </p>
-          <a href="pagina2.html">Ver Galeria &rarr;</a>
+        <div class="cards-grid">
+          <div class="card-item">
+            <h3>📘 Aula 01 - Fundamentos</h3>
+            <p>
+              Estrutura básica de tags HTML, uso do Bloco de Notas e publicação estática via
+              Netlify.
+            </p>
+            <a href="pagina0.html">Ver Currículo &rarr;</a>
+          </div>
+
+          <div class="card-item">
+            <h3>Aula 02 - Design & CSS</h3>
+            <p>
+              Estilização com CSS3, conceitos de box model, cores modernas, tipografia e novos
+              componentes visualmente atraentes.
+            </p>
+            <a href="pagina2.html">Ver Galeria &rarr;</a>
+          </div>
         </div>
       </div>
     </div>
@@ -53,55 +56,5 @@
 
       renderAll();
     </script>
-
-    <style>
-      body {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .container {
-        display: flex;
-        flex: 1;
-        max-width: 900px;
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .welcome-card {
-        background-color: var(--color-surface);
-        padding: var(--space-lg);
-        border-radius: var(--radius-md);
-        box-shadow: var(--shadow-sm);
-        margin-bottom: var(--space-lg);
-        border-left: 6px solid var(--color-primary-400);
-      }
-
-      .cards-grid {
-        display: table;
-        width: 100%;
-        table-layout: fixed;
-        border-spacing: var(--space-sm) 0;
-      }
-
-      .card-item {
-        display: table-cell;
-        background-color: var(--color-surface);
-        padding: var(--space-lg);
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius-md);
-        box-shadow: var(--shadow-sm);
-        vertical-align: top;
-      }
-
-      .card-item h3 {
-        color: var(--color-primary-400);
-      }
-
-      .card-item a {
-        font-weight: var(--font-weight-bold);
-      }
-    </style>
   </body>
 </html>

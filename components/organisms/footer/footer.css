@@ -3,7 +3,6 @@ footer {
   padding: var(--space-lg);
   background-color: var(--color-neutral-500);
   color: var(--color-neutral-300);
-  margin-top: var(--space-xl);
   font-size: var(--font-size-sm);
 }
 
