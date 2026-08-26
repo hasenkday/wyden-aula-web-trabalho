@@ -1,13 +1,16 @@
 @import url('./tokens.css');
 @import url('./base.css');
 @import url('./utilities.css');
+@import url('./layout-utilities.css');
 
 @import url('./page-styles/curriculo.css');
 @import url('./page-styles/galeria.css');
 @import url('./page-styles/hospedagem.css');
-@import url('./page-styles/index.css');
 
 @import url('../components/atoms/badge/badge.css');
+
+@import url('../components/molecules/callout/callout.css');
+@import url('../components/molecules/card/card.css');
 
 @import url('../components/organisms/header-nav/header-nav.css');
 @import url('../components/organisms/footer/footer.css');
