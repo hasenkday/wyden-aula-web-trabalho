@@ -2,7 +2,7 @@ function Footer() {
   return `
     <footer>
       <p>
-        &copy; 2026 UniMetrocamp Wyden - Prof. Leonardo Ramos de Oliveira. Todos os direitos
+        &copy; 2026 UniMetrocamp Wyden - Nadia Hassegawa Kavashima. Todos os direitos
         reservados.
       </p>
     </footer>

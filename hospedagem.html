@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AULA WEB - HOSPEDAGEM DE SITE</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <script src="utils/storage.js"></script>
     <script src="./components/organisms/header-nav/header-nav.js"></script>
     <script src="./components/organisms/footer/footer.js"></script>
   </head>
@@ -27,6 +28,8 @@
     <script>
       function renderAll() {
         document.querySelector('#header-nav').innerHTML = HeaderNav();
+        HeaderNavPillAnimation();
+
         document.querySelector('#footer').innerHTML = Footer();
       }
 
