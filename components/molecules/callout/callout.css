@@ -1,8 +1,16 @@
 .welcome-card {
-  background-color: var(--color-surface);
+  background-color: #f8fbf6;
   padding: var(--space-lg);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   margin-bottom: var(--space-lg);
   border-left: 6px solid;
+}
+
+.welcome-card p {
+  color: #1c3723;
+}
+
+.welcome-card p {
+  color: #1c3723;
 }

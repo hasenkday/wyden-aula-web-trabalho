@@ -111,9 +111,9 @@
 
   /* ----- Shadows ----- */
 
-  --shadow-sm: 0 2px 8px rgb(0 0 0 / 6%);
-  --shadow-md: 0 4px 12px rgb(0 0 0 / 8%);
-  --shadow-lg: 0 4px 15px rgb(0 0 0 / 12%);
+  --shadow-sm: 0 2px 8px rgb(23 26 14 / 6%);
+  --shadow-md: 0 4px 12px rgb(23 26 14 / 8%);
+  --shadow-lg: 0 4px 15px rgb(23 26 14 / 12%);
 
   /* ----- Page ----- */
 
