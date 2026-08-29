@@ -5,7 +5,6 @@
 
 @import url('./page-styles/curriculo.css');
 @import url('./page-styles/galeria.css');
-@import url('./page-styles/hospedagem.css');
 
 @import url('../components/atoms/badge/badge.css');
 
@@ -14,3 +13,4 @@
 
 @import url('../components/organisms/header-nav/header-nav.css');
 @import url('../components/organisms/footer/footer.css');
+@import url('../components/organisms/frog-head/frog-head.css');

@@ -10,11 +10,13 @@
     <script src="utils/storage.js"></script>
     <script src="./components/atoms/badge/badge.js"></script>
     <script src="./components/organisms/header-nav/header-nav.js"></script>
+    <script src="./components/organisms/frog-head/frog-head.js"></script>
     <script src="./components/organisms/footer/footer.js"></script>
   </head>
 
   <body>
-    <div id="header-nav"></div>
+    <header id="header-nav" class="header-nav"></header>
+    <div id="frog-head"></div>
 
     <div class="content">
       <div class="container wrapper h-full">
@@ -133,13 +135,14 @@
       </div>
     </div>
 
-    <div id="footer"></div>
+    <footer id="footer"></footer>
 
     <script>
       function renderAll() {
         document.querySelector('#header-nav').innerHTML = HeaderNav();
         HeaderNavPillAnimation();
 
+        document.querySelector('#frog-head').innerHTML = FrogHead();
         document.querySelector('#footer').innerHTML = Footer();
       }
 
