@@ -5,7 +5,7 @@ function Card({
   cardUrl = '#',
 }) {
   return `
-    <a onclick="${cardUrl}" class="card">
+    <a href="${cardUrl}" class="card">
       <div class="card-header">
         <h3>${title}</h3>
       </div>
