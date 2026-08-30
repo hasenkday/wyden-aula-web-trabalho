@@ -18,120 +18,119 @@
     <header id="header-nav" class="header-nav"></header>
     <div id="frog-head"></div>
 
+    <h1 class="content-headline">Mini Currículo</h1>
     <div class="content">
-      <div class="container wrapper h-full">
-        <div class="cv-header">
-          <h1>Nadia Hassegawa Kavashima</h1>
-          <p>Desiger UX/UI & Front-end | Designer de Produto</p>
+      <div class="container h-full" style="gap: 24px">
+        <div style="display: flex; flex-direction: row; gap: 12px; max-width: 100%">
+          <div style="display: flex; flex-direction: row; gap: 12px; max-width: 100%; width: 30%">
+            <div style="display: flex; gap: 20px">
+              <span style="writing-mode: vertical-rl; text-orientation: upright">KAVASHIMA</span>
+              <span style="writing-mode: vertical-rl; text-orientation: upright">NADIA</span>
+            </div>
+            <div
+              style="
+                border-radius: 24px;
+                background-color: var(--color-surface);
+                border: 12px solid var(--color-surface);
+                display: flex;
+                flex: 1;
+                height: 100%;
+                overflow: hidden;
+                position: relative;
+              "
+            >
+              <img
+                src="https://media.licdn.com/dms/image/v2/D4D03AQGW6Jtb4JghIQ/profile-displayphoto-scale_400_400/B4DZvnYIIhJgAg-/0/1769113422412?e=1789603200&v=beta&t=vnOf1Oiyxwg8oz5uieOiLH3op6b83aswVj-_cVInhNE"
+                style="
+                  transform: translate(-70%, -50%) scale(2) rotate(10deg);
+                  top: 50%;
+                  left: 50%;
+                  width: 100%;
+                  object-fit: cover;
+                  position: absolute;
+                "
+              />
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px; flex: 1; max-width: 100%">
+            <div class="section-card" style="gap: 12px">
+              <h2 style="font-size: 20px; margin-bottom: 12px">
+                Desiger UX/UI & Front-end | Designer de Produto
+              </h2>
+              <p style="font-size: 14px; text-align: justify">
+                Desenvolvo interfaces claras e escaláveis, combinando estratégia de UX com
+                conhecimento prático de front-end. Atuo em pesquisa, fluxos, prototipação e design
+                systems, colaborando com times de engenharia para garantir entregas utilizáveis,
+                consistentes e tecnicamente alinhadas.
+              </p>
+              <p style="font-size: 14px; text-align: justify">
+                Atualmente cursando <strong>Bacharelado em Ciência da Computação</strong>, na
+                Unimetrocamp Wyden (Campinas-SP), para ampliar meus conhecimentos e práticas em
+                áreas de pesquisa e dados para complementar meus serviços atuais.
+              </p>
+            </div>
+            <div
+              class="section-card"
+              style="
+                font-size: 13px;
+                padding: 20px 32px;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 12px 40px;
+              "
+            >
+              <a>📥 nadia.hasenkday@gmail.com</a>
+              <a>📱 +55 (14) 9 8822-0617</a>
+              <a>🪪 www.linkedin.com/in/hasenkday</a>
+              <a>🐙 github.com/hasenkday</a>
+            </div>
+          </div>
         </div>
 
-        <div class="section-title">Dados Pessoais</div>
+        <div class="section-card">
+          <h2 style="font-size: 20px">Experiência profissional</h2>
+          criar component timeline
+        </div>
+        <div class="section-card">
+          <h2 style="font-size: 20px">Experiência acadêmica</h2>
+          criar component exp acadêmica
+        </div>
 
-        <ul class="info-list">
-          <li>
-            <strong>Curso:</strong>
-            Desenvolvimento Web em HTML5, CSS, JS e PHP
-          </li>
+        <div style="display: flex; flex-direction: row; gap: 12px">
+          <div class="section-card">
+            <h2 style="font-size: 20px">Habilidades & Ferramentas</h2>
 
-          <li>
-            <strong>Cidade/UF:</strong>
-            Campinas - SP
-          </li>
+            <div style="display: flex; flex-direction: column; gap: 20px">
+              <div>
+                <strong>UX & Produto</strong>
+                <div id="skills-ux" class="badge-list"></div>
+              </div>
 
-          <li>
-            <strong>Contato:</strong>
+              <div>
+                <strong>Ferramentas de Design</strong>
+                <div id="skills-design" class="badge-list"></div>
+              </div>
 
-            📥 nadia.hasenkday@gmail.com &nbsp;|&nbsp; 📱 +55 (14) 9 8822-0617 &nbsp;|&nbsp; 🐙
-            github.com/hasenkday &nbsp;|&nbsp;
+              <div>
+                <strong>Front-end</strong>
+                <div id="skills-front-end" class="badge-list"></div>
+              </div>
 
-            <br />
-
-            🪪 www.linkedin.com/in/hasenkday
-          </li>
-        </ul>
-
-        <div class="section-title">Sobre Mim</div>
-
-        <p class="cv-about">
-          Desenvolvo interfaces claras e escaláveis, combinando estratégia de UX com conhecimento
-          prático de front-end. Atuo em pesquisa, fluxos, prototipação e design systems, colaborando
-          com times de engenharia para garantir entregas utilizáveis, consistentes e tecnicamente
-          alinhadas.
-
-          <br /><br />
-
-          Atualmente estou cursando Ciência da Computação para ampliar meus conhecimentos e práticas
-          em áreas de pesquisa e dados para complementar meus serviços atuais.
-        </p>
-
-        <div class="section-title">Experiência Profissional</div>
-
-        <ul class="info-list">
-          <li>
-            <strong> Desiner UX/UI & Front-end Dev - Inoa </strong>
-
-            <p>
-              Design e desenvolvimento de melhorias de interface para múltiplos produtos B2B e B2C
-              do ramo financeiro.
-            </p>
-
-            <p class="text-sm">
-              Ago 2026 até o momento &nbsp;•&nbsp; Estágio &nbsp;•&nbsp; Remoto, RJ
-            </p>
-          </li>
-
-          <li>
-            <strong> Designer de Produto & Consultoria UX/UI - Ticomia Eventos </strong>
-
-            <p>
-              Design de plataformas ERP interno, produtos B2B, B2C e B2B2C sendo plataformas web e
-              aplicativos mobile.
-            </p>
-
-            <p class="text-sm">
-              Nov 2024 até o momento &nbsp;•&nbsp; Contrato PJ &nbsp;•&nbsp; Remoto, Bauru-SP
-            </p>
-          </li>
-
-          <li>
-            <strong> Designer de produto & Full-stack Dev - Kodus </strong>
-
-            <p>
-              Progressão entre vários cargos começando por estágio em web design para desenvolvedor
-              full-stack e por fim Designer UX/UI. Desenvolvimento de ERP interno, plataformas B2C e
-              ferramenta de revisão de código IA.
-            </p>
-
-            <p class="text-sm">
-              Jan 2020 - Abr 2025 (5 anos e 4 meses) &nbsp;•&nbsp; Contrato PJ &nbsp;•&nbsp;
-              Híbrido, Bauru-SP
-            </p>
-          </li>
-        </ul>
-
-        <div class="section-title">Idiomas</div>
-
-        <ul class="info-list">
-          <li>
-            <strong>UX & Produto</strong>
-            <div id="skills-ux" class="skills-list"></div>
-          </li>
-
-          <li>
-            <strong>Ferramentas de Design</strong>
-            <div id="skills-design" class="skills-list"></div>
-          </li>
-
-          <li>
-            <strong>Front-end</strong>
-            <div id="skills-front-end" class="skills-list"></div>
-          </li>
-
-          <li>
-            <strong>Back-end & Arquitetura</strong>
-            <div id="skills-back-end" class="skills-list"></div>
-          </li>
-        </ul>
+              <div>
+                <strong>Back-end & Arquitetura</strong>
+                <div id="skills-back-end" class="badge-list"></div>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px; width: 30%">
+            <div class="section-card">
+              <h2 style="font-size: 20px">Idiomas</h2>
+              <p><strong>Português (Brasil)</strong> • Nativo/Fluente</p>
+              <p><strong>Inglês</strong> • Avançado (nível técnico)</p>
+            </div>
+            <div class="section-card" style="background-color: #ecf3dd2e"></div>
+          </div>
+        </div>
       </div>
     </div>
 

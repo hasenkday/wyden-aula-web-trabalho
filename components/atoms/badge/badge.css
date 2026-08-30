@@ -1,3 +1,10 @@
+.badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  margin-top: var(--space-xs);
+}
+
 .badge {
   display: inline-block;
 
