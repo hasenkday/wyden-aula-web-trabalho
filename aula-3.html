@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mini Currículo Profissional</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="utils/storage.js"></script>
+    <script src="./components/organisms/header-nav/header-nav.js"></script>
+    <script src="./components/organisms/frog-head/frog-head.js"></script>
+    <script src="./components/organisms/footer/footer.js"></script>
+
+    <script src="./projects/aula-3/exemplo1.js"></script>
+    <script src="./projects/aula-3/exemplo2.js"></script>
+    <script src="./projects/aula-3/exemplo3.js"></script>
+    <script src="./projects/aula-3/exemplo4.js"></script>
+    <script src="./projects/aula-3/exemplo5.js"></script>
+    <script src="./projects/aula-3/exemplo6.js"></script>
+    <script src="./projects/aula-3/exemplo7.js"></script>
+    <script src="./projects/aula-3/exemplo8.js"></script>
+    <script src="./projects/aula-3/exemplo9.js"></script>
+    <script src="./projects/aula-3/exemplo10.js"></script>
+  </head>
+
+  <body>
+    <header id="header-nav" class="header-nav"></header>
+    <div id="frog-head"></div>
+
+    <h1 class="content-headline">Aula 3: Introdução a DIV e CSS</h1>
+    <div class="content">
+      <div class="container h-full" style="gap: 24px; flex-direction: row">
+        <div style="display: flex; flex: 1; gap: 8px; flex-direction: column">
+          <div onclick="changeExample(1)" class="button">Exemplo 1 - DIV e CSS</div>
+          <div onclick="changeExample(2)" class="button">Exemplo 2 - Várias DIVs</div>
+          <div onclick="changeExample(3)" class="button">Exemplo 3 - Cores</div>
+          <div onclick="changeExample(4)" class="button">Exemplo 4 - Imagem</div>
+          <div onclick="changeExample(5)" class="button">Exemplo 5 - Bordas arredondadas</div>
+          <div onclick="changeExample(6)" class="button">Exemplo 6 - Sombra</div>
+          <div onclick="changeExample(7)" class="button">Exemplo 7 - Centralizado</div>
+          <div onclick="changeExample(8)" class="button">Exemplo 8 - Flexbox</div>
+          <div onclick="changeExample(9)" class="button">Exemplo 9 - Hover</div>
+          <div onclick="changeExample(10)" class="button">Exemplo 10 - Responsivo</div>
+        </div>
+
+        <div class="section-card">
+          <div id="playground"></div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .button {
+        cursor: pointer;
+        padding: 8px 16px;
+        background: #96bb82;
+        border-radius: 12px;
+        transition: all 200ms ease-out;
+      }
+      .button:hover {
+        background: #aac69d;
+      }
+
+      #playground {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        overflow: auto;
+      }
+    </style>
+
+    <footer id="footer"></footer>
+
+    <script>
+      function renderAll() {
+        document.querySelector('#header-nav').innerHTML = HeaderNav();
+        HeaderNavPillAnimation();
+
+        document.querySelector('#frog-head').innerHTML = FrogHead();
+        document.querySelector('#footer').innerHTML = Footer();
+
+        document.querySelector('#playground').innerHTML = Exemplo1();
+      }
+      renderAll();
+
+      function changeExample(example) {
+        console.log(example);
+        switch (example) {
+          case 1:
+            document.querySelector('#playground').innerHTML = Exemplo1();
+            break;
+          case 2:
+            document.querySelector('#playground').innerHTML = Exemplo2();
+            break;
+          case 3:
+            document.querySelector('#playground').innerHTML = Exemplo3();
+            break;
+          case 4:
+            document.querySelector('#playground').innerHTML = Exemplo4();
+            break;
+          case 5:
+            document.querySelector('#playground').innerHTML = Exemplo5();
+            break;
+          case 6:
+            document.querySelector('#playground').innerHTML = Exemplo6();
+            break;
+          case 7:
+            document.querySelector('#playground').innerHTML = Exemplo7();
+            break;
+          case 8:
+            document.querySelector('#playground').innerHTML = Exemplo8();
+            break;
+          case 9:
+            document.querySelector('#playground').innerHTML = Exemplo9();
+            break;
+          case 10:
+            document.querySelector('#playground').innerHTML = Exemplo10();
+            break;
+          default:
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
