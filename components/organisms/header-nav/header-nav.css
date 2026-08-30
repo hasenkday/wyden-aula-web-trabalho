@@ -68,6 +68,11 @@ nav a:hover {
   );
   border-radius: var(--radius-pill);
   pointer-events: none;
+  opacity: 0;
+}
+
+nav .nav-pill.visible {
+  opacity: 1;
 }
 
 nav .nav-pill.is-ready {
