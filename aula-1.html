@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Nadia | Portal - Dev Web</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script src="utils/storage.js"></script>
+    <script src="./components/organisms/header-nav/header-nav.js"></script>
+    <script src="./components/organisms/frog-head/frog-head.js"></script>
+    <script src="./components/organisms/footer/footer.js"></script>
+  </head>
+
+  <body>
+    <header id="header-nav" class="header-nav"></header>
+    <div id="frog-head"></div>
+
+    <h2 class="content-headline">Aula 1: Mini Corrida</h2>
+    <div class="content">
+      <div class="container">
+        <div class="section-card">
+          <div class="flex-col race-road">
+            <img
+              class="car"
+              style="animation-duration: 7s"
+              width="100px"
+              src="./projects/aula-1/carro1.png"
+            />
+            <img
+              class="car"
+              style="animation-duration: 4s"
+              width="100px"
+              src="./projects/aula-1/carro2.png"
+            />
+            <img
+              class="car"
+              style="animation-duration: 5s"
+              width="100px"
+              src="./projects/aula-1/carro3.png"
+            />
+            <img
+              class="car"
+              style="animation-duration: 12s"
+              width="100px"
+              src="./projects/aula-1/carro4.png"
+            />
+          </div>
+
+          <div class="flex-row" style="justify-content: center">
+            <div onclick="raceAction('reset', this)" class="button">Reset ⟳</div>
+            <div onclick="raceAction('start', this)" class="button">Start ▶</div>
+            <div onclick="raceAction('stop', this)" class="button">Stop ⏹</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .button {
+        border: 2px solid var(--color-secondary-400);
+        padding: 8px 16px;
+        color: var(--color-secondary-400);
+      }
+      .race-road {
+        background-color: var(--color-primary-300);
+        border-radius: var(--radius-md);
+        width: 100%;
+        padding: 24px 0;
+        overflow: hidden;
+      }
+      .car {
+        margin: 12px;
+        align-self: flex-start;
+      }
+      .car.startRace {
+        animation-name: moveInfiniteX;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes moveInfiniteX {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(100vw);
+        }
+      }
+    </style>
+
+    <footer id="footer"></footer>
+
+    <script>
+      function renderAll() {
+        document.querySelector('#header-nav').innerHTML = HeaderNav();
+        HeaderNavPillAnimation();
+
+        document.querySelector('#frog-head').innerHTML = FrogHead();
+        document.querySelector('#footer').innerHTML = Footer();
+      }
+      renderAll();
+
+      function raceAction(option, currentButton) {
+        document.querySelectorAll('.button').forEach((item) => item.classList.remove('active'));
+        currentButton.classList.add('active');
+
+        const cars = document.querySelectorAll('.car');
+        switch (option) {
+          case 'reset':
+            cars.forEach((car) => {
+              car.classList.remove('startRace');
+            });
+            break;
+
+          case 'start':
+            cars.forEach((car) => {
+              car.classList.remove('startRace');
+              car.offsetWidth;
+
+              car.classList.add('startRace');
+              car.style.animationPlayState = 'running';
+            });
+            break;
+
+          case 'stop':
+            cars.forEach((car) => {
+              car.style.animationPlayState = 'paused';
+            });
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
