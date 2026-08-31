@@ -30,9 +30,9 @@
     <div id="frog-head"></div>
 
     <h2 class="content-headline">Aula 3: Introdução a DIV e CSS</h2>
-    <div class="content">
-      <div class="container" style="flex-direction: row">
-        <div style="display: flex; flex: 1; gap: 8px; flex-direction: column">
+    <div class="content aula3">
+      <div class="container">
+        <div class="examples">
           <div onclick="changeExample(1, this)" class="button active">
             Exemplo 1 - DIV e CSS <span>🡢</span>
           </div>
@@ -72,12 +72,34 @@
     </div>
 
     <style>
+      .examples {
+        display: flex;
+        flex: 1;
+        gap: 8px;
+        flex-direction: column;
+      }
+
       #playground {
         display: flex;
         flex-direction: column;
         gap: 12px;
         overflow: auto;
         height: 100%;
+      }
+
+      .aula3 container {
+        flex-direction: row;
+      }
+
+      @media screen and (max-width: 1080px) {
+        .aula3 container {
+          flex-direction: column;
+        }
+
+        .aula3 .examples {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
       }
     </style>
 
