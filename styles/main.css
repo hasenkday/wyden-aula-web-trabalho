@@ -10,6 +10,7 @@
 @import url('./page-styles/galeria.css');
 
 @import url('../components/atoms/badge/badge.css');
+@import url('../components/atoms/button/button.css');
 
 @import url('../components/molecules/callout/callout.css');
 @import url('../components/molecules/card/card.css');
