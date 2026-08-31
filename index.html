@@ -28,6 +28,7 @@
         <div class="grid-cols-2">
           <div id="card1"></div>
           <div id="card2"></div>
+          <div id="card3"></div>
         </div>
       </div>
     </div>
@@ -53,14 +54,21 @@
         });
 
         document.querySelector('#card1').innerHTML = Card({
-          title: 'Aulas 01 a 03 - Fundamentos',
+          title: 'Aulas 01 - Mini Corrida',
+          description: 'Mini jogo de corrida demonstrando o uso de HTML e CSS3.',
+          buttonLabel: 'Ver Corrida &rarr;',
+          cardUrl: 'aula-1.html',
+        });
+
+        document.querySelector('#card2').innerHTML = Card({
+          title: 'Aulas 02 e 03 - Fundamentos',
           description:
             'Estrutura básica de tags HTML, uso do Bloco de Notas e publicação estática via Netlify.',
           buttonLabel: 'Ver Currículo &rarr;',
           cardUrl: 'curriculo.html',
         });
 
-        document.querySelector('#card2').innerHTML = Card({
+        document.querySelector('#card3').innerHTML = Card({
           title: 'Aula 04 - Design & CSS',
           description:
             'Estilização com CSS3, conceitos de box model, cores modernas, tipografia e novos componentes visualmente atraentes.',

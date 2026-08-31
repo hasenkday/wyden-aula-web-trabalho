@@ -65,53 +65,19 @@
           </div>
         </div>
 
-        <div class="section-card">
+        <div class="section-card" style="flex: 1; overflow: hidden">
           <div id="playground"></div>
         </div>
       </div>
     </div>
 
     <style>
-      .button {
-        cursor: pointer;
-        padding: 16px 20px;
-        background: var(--color-surface);
-        border-radius: 12px;
-        transition: all 200ms ease-out;
-        font-weight: var(--font-weight-semibold);
-        color: var(--color-primary-400);
-        display: flex;
-        gap: 20px;
-        justify-content: space-between;
-      }
-      .button span {
-        color: transparent;
-      }
-      .button:hover {
-        background: #fff;
-        color: var(--color-secondary-400);
-        transform: scale(1.02);
-        box-shadow: var(--shadow-md);
-      }
-      .button:hover > span {
-        color: var(--color-secondary-400);
-      }
-
-      .button.active {
-        background: var(--color-secondary-400);
-        color: var(--color-surface);
-        transform: scale(1.02);
-        box-shadow: var(--shadow-md);
-      }
-      .button.active > span {
-        color: transparent;
-      }
-
       #playground {
         display: flex;
         flex-direction: column;
         gap: 12px;
         overflow: auto;
+        height: 100%;
       }
     </style>
 

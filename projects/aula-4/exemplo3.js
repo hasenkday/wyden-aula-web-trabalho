@@ -9,20 +9,20 @@ function Exemplo3() {
             .vermelha {
                 width: 100px;
                 height: 100px;
-                background-color: rgb(216, 105, 133);
+                background-color: rgb(105, 216, 107);
                 text-align: center;
             }
             .verde {
                 width: 100px;
                 height: 100px;
-                background-color: rgb(120, 209, 120);
+                background-color: rgb(216, 214, 96);
                 display: inlineblock;
                 text-align: center;
             }
             .azul {
                 width: 100px;
                 height: 100px;
-                background-color: rgb(114, 114, 204);
+                background-color: rgb(204, 114, 129);
                 display: inlineblock;
                 text-align: center;
             }

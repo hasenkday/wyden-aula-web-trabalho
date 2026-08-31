@@ -7,15 +7,16 @@ function Exemplo9() {
             .caixa {
                 width: 150px;
                 height: 100px;
-                background-color: lightblue;
+                background-color: lightgreen;
                 transition: 0.3s;
                 text-align: center;
                 line-height: 100px;
+                transition: all 200ms ease-out;
             }
             .caixa:hover {
-                background-color: darkblue;
+                background-color: darkgreen;
                 color: white;
-                transform: scale(1.1);
+                transform: scale(1.2) translateX(15px) translateY(15px);
             }
         </style>
     `;
