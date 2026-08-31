@@ -20,69 +20,73 @@
 
     <h2 class="content-headline">Galeria de Projetos & Contato</h2>
     <div class="content">
-      <div class="container section-card">
-        <h3 class="section-heading">Projetos Desenvolvidos na Disciplina</h3>
+      <div class="container">
+        <div class="section-card">
+          <h3 class="section-heading">Projetos Desenvolvidos na Disciplina</h3>
 
-        <table class="styled-table">
-          <thead>
-            <tr>
-              <th>Projeto</th>
-              <th>Tecnologias</th>
-              <th>Status</th>
-            </tr>
-          </thead>
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Projeto</th>
+                <th>Tecnologias</th>
+                <th>Status</th>
+              </tr>
+            </thead>
 
-          <tbody>
-            <tr>
-              <td>Mini Currículo Estático</td>
-              <td>HTML5, CSS Base</td>
-              <td class="status status--success">Concluído</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>Mini Currículo Estático</td>
+                <td>HTML5, CSS Base</td>
+                <td class="status status--success">Concluído</td>
+              </tr>
 
-            <tr>
-              <td>Portal da Turma Responsivo</td>
-              <td>HTML5, CSS Internal, Flex Layout</td>
-              <td class="status status--warning">Em Progresso</td>
-            </tr>
+              <tr>
+                <td>Portal da Turma Responsivo</td>
+                <td>HTML5, CSS Internal, Flex Layout</td>
+                <td class="status status--warning">Em Progresso</td>
+              </tr>
 
-            <tr>
-              <td>Formulário de Feedback</td>
-              <td>HTML5 Form Tags, Custom CSS</td>
-              <td class="status status--success">Concluído</td>
-            </tr>
-          </tbody>
-        </table>
+              <tr>
+                <td>Formulário de Feedback</td>
+                <td>HTML5 Form Tags, Custom CSS</td>
+                <td class="status status--success">Concluído</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-        <h3 class="section-heading mt-xl">Entre em Contato com a Equipe</h3>
+        <div class="section-card">
+          <h3 class="section-heading mt-xl">Entre em Contato com a Equipe</h3>
 
-        <form
-          onsubmit="
-            alert('Mensagem enviada com sucesso! (Simulação)');
-            return false;
-          "
-        >
-          <div class="form-group">
-            <label for="nome">Seu Nome:</label>
-            <input type="text" id="nome" placeholder="Digite seu nome completo" required />
-          </div>
+          <form
+            onsubmit="
+              alert('Mensagem enviada com sucesso! (Simulação)');
+              return false;
+            "
+          >
+            <div class="form-group">
+              <label for="nome">Seu Nome:</label>
+              <input type="text" id="nome" placeholder="Digite seu nome completo" required />
+            </div>
 
-          <div class="form-group">
-            <label for="email">Seu E-mail:</label>
-            <input type="email" id="email" placeholder="nome@exemplo.com" required />
-          </div>
+            <div class="form-group">
+              <label for="email">Seu E-mail:</label>
+              <input type="email" id="email" placeholder="nome@exemplo.com" required />
+            </div>
 
-          <div class="form-group">
-            <label for="mensagem">Mensagem ou Sugestão:</label>
-            <textarea
-              id="mensagem"
-              rows="4"
-              placeholder="Escreva sua mensagem aqui..."
-              required
-            ></textarea>
-          </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem ou Sugestão:</label>
+              <textarea
+                id="mensagem"
+                rows="4"
+                placeholder="Escreva sua mensagem aqui..."
+                required
+              ></textarea>
+            </div>
 
-          <button type="submit" class="btn-submit">Enviar Mensagem</button>
-        </form>
+            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+          </form>
+        </div>
       </div>
     </div>
 
