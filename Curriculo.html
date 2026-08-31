@@ -20,10 +20,10 @@
     <div id="frog-head"></div>
 
     <h2 class="content-headline">Mini Currículo</h2>
-    <div class="content">
+    <div class="content resume">
       <div class="container">
-        <div class="flex-row">
-          <div class="flex-row" style="width: 30%">
+        <div class="flex-row about">
+          <div class="flex-row profile">
             <div
               style="
                 display: flex;
@@ -32,46 +32,18 @@
                 align-items: start;
               "
             >
-              <span
-                style="
-                  writing-mode: vertical-rl;
-                  text-orientation: upright;
-                  font-size: var(--font-size-h1);
-                "
-              >
-                KAVASHIMA
-              </span>
-              <span
-                style="
-                  writing-mode: vertical-rl;
-                  text-orientation: upright;
-                  font-size: 53px;
-                  margin-top: -11px;
-                "
-              >
-                NADIA
-              </span>
+              <span class="last_name"> KAVASHIMA </span>
+              <span class="first_name"> NADIA </span>
             </div>
-            <div
-              style="
-                border-radius: var(--radius-lg);
-                background-color: var(--color-surface);
-                border: 12px solid var(--color-surface);
-                display: flex;
-                flex: 1;
-                height: 100%;
-                overflow: hidden;
-                position: relative;
-              "
-            >
+            <div class="photo">
               <img
                 src="https://media.licdn.com/dms/image/v2/D4D03AQGW6Jtb4JghIQ/profile-displayphoto-scale_400_400/B4DZvnYIIhJgAg-/0/1769113422412?e=1789603200&v=beta&t=vnOf1Oiyxwg8oz5uieOiLH3op6b83aswVj-_cVInhNE"
                 style="
                   transform: translate(-70%, -50%) scale(2) rotate(10deg);
                   top: 50%;
                   left: 50%;
-                  width: 100%;
                   object-fit: cover;
+                  width: inherit;
                   position: absolute;
                 "
               />
@@ -94,16 +66,7 @@
                 áreas de pesquisa e dados para complementar meus serviços atuais.
               </p>
             </div>
-            <div
-              class="section-card"
-              style="
-                font-size: 13px;
-                padding: 20px 32px;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 12px 40px;
-              "
-            >
+            <div class="section-card contact">
               <a>📥 nadia.hasenkday@gmail.com</a>
               <a>📱 +55 (14) 9 8822-0617</a>
               <a>🪪 www.linkedin.com/in/hasenkday</a>
@@ -161,17 +124,8 @@
         </div>
         <div class="section-card">
           <h3 style="font-size: 20px">Experiência acadêmica</h3>
-          <div class="flex-row">
-            <div
-              class="flex-col"
-              style="
-                background: var(--color-primary-100);
-                padding: 20px;
-                border-radius: var(--radius-md);
-                gap: 16px;
-                flex: 1;
-              "
-            >
+          <div class="flex-row academic_section">
+            <div class="flex-col academic_exp">
               <span style="color: var(--color-text-muted); font-size: var(--font-size-small)">
                 Bacharelado<br />
                 Centro Universitário UniMetrocamp Wyden
@@ -183,16 +137,7 @@
               </span>
             </div>
 
-            <div
-              class="flex-col"
-              style="
-                background: var(--color-primary-100);
-                padding: 20px;
-                border-radius: var(--radius-md);
-                gap: 16px;
-                flex: 1;
-              "
-            >
+            <div class="flex-col academic_exp">
               <span style="color: var(--color-text-muted); font-size: var(--font-size-small)">
                 Tecnólogo (CST)<br />
                 UNICV - Centro Universitário Cidade Verde
@@ -204,16 +149,7 @@
               </span>
             </div>
 
-            <div
-              class="flex-col"
-              style="
-                background: var(--color-primary-100);
-                padding: 20px;
-                border-radius: var(--radius-md);
-                gap: 16px;
-                flex: 1;
-              "
-            >
+            <div class="flex-col academic_exp">
               <span style="color: var(--color-text-muted); font-size: var(--font-size-small)">
                 Técnico - UNESP - CTI<br />
                 Colégio Técnico Industrial - "Prof. Isaac Portal Roldán"
@@ -227,8 +163,8 @@
           </div>
         </div>
 
-        <div class="flex-row">
-          <div class="section-card">
+        <div class="flex-row last_section">
+          <div class="section-card skills_section">
             <h3 style="font-size: 20px">Habilidades & Ferramentas</h3>
 
             <div class="flex-col" style="gap: 40px">
@@ -253,7 +189,7 @@
               </div>
             </div>
           </div>
-          <div class="flex-col" style="width: 30%">
+          <div class="flex-col lang_section">
             <div class="section-card">
               <h3>Idiomas</h3>
               <p style="font-size: var(--font-size-small) !important">
@@ -263,13 +199,122 @@
                 <strong>Inglês</strong> • Avançado (nível técnico)
               </p>
             </div>
-            <div class="section-card"></div>
+            <div class="section-card others"></div>
           </div>
         </div>
       </div>
     </div>
 
     <footer id="footer"></footer>
+
+    <style>
+      .resume .profile {
+        width: 30%;
+      }
+
+      .resume .photo {
+        border-radius: var(--radius-lg);
+        background-color: var(--color-surface);
+        border: 12px solid var(--color-surface);
+        display: flex;
+        flex: 1;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .resume .first_name {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: 53px;
+        margin-top: -11px;
+      }
+
+      .resume .last_name {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        font-size: var(--font-size-h1);
+      }
+
+      .resume .contact {
+        font-size: 13px;
+        padding: 20px 32px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px 40px;
+      }
+
+      .resume .academic_exp {
+        flex-direction: column;
+        background: var(--color-primary-100);
+        padding: 20px;
+        border-radius: var(--radius-md);
+        gap: 16px;
+        flex: 1;
+      }
+
+      .resume .last_section {
+        flex-direction: row;
+      }
+
+      .resume .lang_section {
+        width: 30%;
+      }
+
+      @media screen and (max-width: 1080px) {
+        .resume .about {
+          flex-direction: column;
+          align-items: center;
+        }
+        .resume .about .flex-col,
+        .resume .last_section {
+          gap: 24px;
+        }
+
+        .resume .profile {
+          width: 300px;
+          justify-content: center;
+        }
+        .resume .photo {
+          height: 300px;
+        }
+
+        .resume .first_name {
+          font-size: 42px;
+          margin-top: -11px;
+        }
+
+        .resume .last_name {
+          font-size: 22.6px;
+          margin-top: 2px;
+        }
+
+        .resume .last_section {
+          flex-direction: column;
+        }
+
+        .resume .skills_section {
+          order: 2;
+        }
+
+        .resume .lang_section {
+          order: 1;
+          width: 100%;
+        }
+
+        .resume .lang_section .others {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 756px) {
+        .resume .contact {
+          grid-template-columns: 1fr;
+        }
+        .resume .academic_section {
+          flex-direction: column;
+        }
+      }
+    </style>
 
     <script>
       function renderAll() {
