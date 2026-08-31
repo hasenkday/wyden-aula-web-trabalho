@@ -1,12 +1,12 @@
 footer {
   text-align: center;
   padding: var(--space-lg);
-  background-color: #0f120f;
-  color: #c1d4b8a0;
-  font-size: var(--font-size-sm);
+  background-color: var(--color-primary-500);
+  color: var(--color-neutral-300);
 }
 
 footer p {
-  font-size: var(--font-size-xs);
   margin-bottom: 0;
+  font-size: var(--font-size-small);
+  color: inherit;
 }

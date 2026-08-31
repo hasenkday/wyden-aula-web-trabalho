@@ -1,18 +1,12 @@
-.wrapper > h1 {
-  border-bottom: 2px solid var(--color-info-300);
-  padding-bottom: var(--space-xs);
-}
-
 .section-heading {
   color: var(--color-info-400);
-  font-size: var(--font-size-lg);
 }
 
 .styled-table {
   width: 100%;
   border-collapse: collapse;
   margin-block: var(--space-lg);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-bopdy);
 }
 
 .styled-table thead tr {

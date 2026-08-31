@@ -1,11 +1,9 @@
 .card {
-  background-color: #f8fbf6;
+  background-color: var(--color-surface);
   padding: var(--space-lg);
   border-radius: 16px;
   box-shadow: var(--shadow-lg);
   height: 100%;
-  display: flex;
-  flex-direction: column;
   text-decoration: none;
   transition: all 200ms ease-out;
 }
@@ -17,18 +15,13 @@
 }
 
 .card-header h3 {
-  color: #4d7811;
+  color: var(--color-primary-500);
 }
 
 .card-body {
   flex-grow: 1;
 }
 
-.card-body p {
-  color: #1c37238d;
-}
-
 .card-footer {
   font-weight: var(--font-weight-bold);
-  color: #4d7811;
 }

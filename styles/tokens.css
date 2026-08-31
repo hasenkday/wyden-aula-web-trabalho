@@ -1,96 +1,119 @@
 :root {
   /* ----- Colors: Neutral ----- */
 
-  --color-neutral-100: #f8fafc;
-  --color-neutral-200: #e2e8f0;
-  --color-neutral-300: #94a3b8;
-  --color-neutral-400: #475569;
-  --color-neutral-500: #0f172a;
+  --color-neutral-100: #f2fded;
+  --color-neutral-200: #c3cebe;
+  --color-neutral-300: #949f8f;
+  --color-neutral-400: #657060;
+  --color-neutral-500: #364131;
+  --color-neutral-600: #071202;
 
   /* ----- Colors: Primary ----- */
 
-  --color-primary-100: #ebf8ff;
-  --color-primary-200: #90cdf4;
-  --color-primary-300: #3182ce;
-  --color-primary-400: #2b6cb0;
-  --color-primary-500: #1a365d;
+  --color-primary-100: #edf8e4;
+  --color-primary-200: #e5f1d5;
+  --color-primary-300: #d4e1ba;
+  --color-primary-400: #707b5f;
+  --color-primary-500: #313c28;
 
   /* ----- Colors: Secondary ----- */
 
-  --color-secondary-100: #f0f5ec;
-  --color-secondary-200: #dcebd3;
-  --color-secondary-300: #9abf80;
-  --color-secondary-400: #55783f;
-  --color-secondary-500: #2f4a25;
+  --color-secondary-100: #eae8ca;
+  --color-secondary-200: #ddca96;
+  --color-secondary-300: #c49540;
+  --color-secondary-400: #685420;
+  --color-secondary-500: #2e2c0e;
+
+  /* ----- Colors: Tertiary ----- */
+
+  --color-tertiary-100: #efeede;
+  --color-tertiary-200: #e1a28e;
+  --color-tertiary-300: #cd4831;
+  --color-tertiary-400: #6c2c18;
+  --color-tertiary-500: #161606;
 
   /* ----- Support: Success ----- */
 
-  --color-success-100: #f0fdf4;
-  --color-success-200: #bbf7d0;
-  --color-success-300: #4ade80;
-  --color-success-400: #16a34a;
-  --color-success-500: #14532d;
+  --color-success-100: #bdffd5;
+  --color-success-200: #78fcb6;
+  --color-success-300: #4cd08e;
+  --color-success-400: #038740;
+  --color-success-500: #004318;
 
   /* ----- Support: Danger ----- */
 
-  --color-danger-100: #fef2f2;
-  --color-danger-200: #fecaca;
-  --color-danger-300: #f87171;
-  --color-danger-400: #dc2626;
-  --color-danger-500: #7f1d1d;
+  --color-danger-100: #ffcab4;
+  --color-danger-200: #f98875;
+  --color-danger-300: #af362b;
+  --color-danger-400: #831200;
+  --color-danger-500: #3a1100;
 
   /* ----- Support: Info ----- */
 
-  --color-info-100: #eff6ff;
-  --color-info-200: #bfdbfe;
-  --color-info-300: #60a5fa;
-  --color-info-400: #2563eb;
-  --color-info-500: #1e3a8a;
+  --color-info-100: #adefff;
+  --color-info-200: #75c9f9;
+  --color-info-300: #3784bb;
+  --color-info-400: #005382;
+  --color-info-500: #002d38;
 
   /* ----- Support: Warning ----- */
 
-  --color-warning-100: #fffbeb;
-  --color-warning-200: #fde68a;
-  --color-warning-300: #fbbf24;
-  --color-warning-400: #d97706;
-  --color-warning-500: #78350f;
+  --color-warning-100: #ffd8b7;
+  --color-warning-200: #fbb777;
+  --color-warning-300: #ca8746;
+  --color-warning-400: #824800;
+  --color-warning-500: #392700;
 
   /* ------------------------------
    * Semantic colors 
    * ------------------------------ */
 
-  --color-background: var(--color-neutral-100);
-  --color-surface: #ffffff;
+  --color-background: var(--color-primary-300);
+  --color-surface: var(--color-neutral-100);
 
-  --color-text: var(--color-neutral-500);
+  --color-text: var(--color-neutral-600);
   --color-text-muted: var(--color-neutral-400);
 
   --color-border: var(--color-neutral-200);
 
-  --color-heading: var(--color-neutral-500);
-  --color-link: var(--color-primary-400);
+  --color-heading: var(--color-neutral-600);
+  --color-link: var(--color-secondary-300);
 
-  --color-focus: var(--color-primary-300);
+  --color-focus: var(--color-primary-400);
 
   /* ----- Typography ----- */
 
-  --font-family-base: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-heading: 'DynaPuff', system-ui;
+  --font-family-body: 'Atkinson Hyperlegible Next', sans-serif;
+  --font-family-special: 'Matemasie', sans-serif;
 
-  --font-size-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.875rem);
-  --font-size-sm: clamp(0.875rem, 0.84rem + 0.18vw, 1rem);
-  --font-size-md: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
-  --font-size-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.375rem);
-  --font-size-xl: clamp(1.375rem, 1.2rem + 0.8vw, 2rem);
-  --font-size-2xl: clamp(1.75rem, 1.4rem + 1.5vw, 2.75rem);
+  /* Body */
+  --font-size-small: 12px;
+  --font-size-body: 14px;
 
+  /* Headings */
+  --font-size-h6: 14px;
+  --font-size-h5: 15px;
+  --font-size-h4: 16px;
+  --font-size-h3: 18px;
+  --font-size-h2: 22px;
+  --font-size-h1: 28px;
+
+  /* Weight */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-  --line-height-tight: 1.2;
-  --line-height-base: 1.5;
-  --line-height-relaxed: 1.6;
+  /* Line height */
+  --line-height-tight: 1.15;
+  --line-height-heading: 1.25;
+  --line-height-body: 1.5;
+
+  /* Letter spacing */
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.01em;
 
   /* ----- Spacing ----- */
 
@@ -117,5 +140,24 @@
 
   /* ----- Page ----- */
 
-  --page-background: linear-gradient(174deg, #2c382f 0%, #030604 100%);
+  --page-background: linear-gradient(
+    174deg,
+    var(--color-primary-500) 0%,
+    var(--color-neutral-600) 50%
+  );
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 756px) {
+  :root {
+    --font-size-small: 11px;
+    --font-size-body: 13px;
+
+    --font-size-h6: 13px;
+    --font-size-h5: 14px;
+    --font-size-h4: 15px;
+    --font-size-h3: 17px;
+    --font-size-h2: 20px;
+    --font-size-h1: 24px;
+  }
 }

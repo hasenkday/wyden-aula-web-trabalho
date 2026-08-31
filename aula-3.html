@@ -29,20 +29,40 @@
     <header id="header-nav" class="header-nav"></header>
     <div id="frog-head"></div>
 
-    <h1 class="content-headline">Aula 3: Introdução a DIV e CSS</h1>
+    <h2 class="content-headline">Aula 3: Introdução a DIV e CSS</h2>
     <div class="content">
-      <div class="container h-full" style="gap: 24px; flex-direction: row">
+      <div class="container" style="gap: 24px; flex-direction: row">
         <div style="display: flex; flex: 1; gap: 8px; flex-direction: column">
-          <div onclick="changeExample(1)" class="button">Exemplo 1 - DIV e CSS</div>
-          <div onclick="changeExample(2)" class="button">Exemplo 2 - Várias DIVs</div>
-          <div onclick="changeExample(3)" class="button">Exemplo 3 - Cores</div>
-          <div onclick="changeExample(4)" class="button">Exemplo 4 - Imagem</div>
-          <div onclick="changeExample(5)" class="button">Exemplo 5 - Bordas arredondadas</div>
-          <div onclick="changeExample(6)" class="button">Exemplo 6 - Sombra</div>
-          <div onclick="changeExample(7)" class="button">Exemplo 7 - Centralizado</div>
-          <div onclick="changeExample(8)" class="button">Exemplo 8 - Flexbox</div>
-          <div onclick="changeExample(9)" class="button">Exemplo 9 - Hover</div>
-          <div onclick="changeExample(10)" class="button">Exemplo 10 - Responsivo</div>
+          <div onclick="changeExample(1, this)" class="button active">
+            Exemplo 1 - DIV e CSS <span>🡢</span>
+          </div>
+          <div onclick="changeExample(2, this)" class="button">
+            Exemplo 2 - Várias DIVs <span>🡢</span>
+          </div>
+          <div onclick="changeExample(3, this)" class="button">
+            Exemplo 3 - Cores <span>🡢</span>
+          </div>
+          <div onclick="changeExample(4, this)" class="button">
+            Exemplo 4 - Imagem <span>🡢</span>
+          </div>
+          <div onclick="changeExample(5, this)" class="button">
+            Exemplo 5 - Bordas arredondadas <span>🡢</span>
+          </div>
+          <div onclick="changeExample(6, this)" class="button">
+            Exemplo 6 - Sombra <span>🡢</span>
+          </div>
+          <div onclick="changeExample(7, this)" class="button">
+            Exemplo 7 - Centralizado <span>🡢</span>
+          </div>
+          <div onclick="changeExample(8, this)" class="button">
+            Exemplo 8 - Flexbox <span>🡢</span>
+          </div>
+          <div onclick="changeExample(9, this)" class="button">
+            Exemplo 9 - Hover <span>🡢</span>
+          </div>
+          <div onclick="changeExample(10, this)" class="button">
+            Exemplo 10 - Responsivo <span>🡢</span>
+          </div>
         </div>
 
         <div class="section-card">
@@ -54,13 +74,37 @@
     <style>
       .button {
         cursor: pointer;
-        padding: 8px 16px;
-        background: #96bb82;
+        padding: 16px 20px;
+        background: var(--color-surface);
         border-radius: 12px;
         transition: all 200ms ease-out;
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-primary-400);
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+      }
+      .button span {
+        color: transparent;
       }
       .button:hover {
-        background: #aac69d;
+        background: #fff;
+        color: var(--color-secondary-400);
+        transform: scale(1.02);
+        box-shadow: var(--shadow-md);
+      }
+      .button:hover > span {
+        color: var(--color-secondary-400);
+      }
+
+      .button.active {
+        background: var(--color-secondary-400);
+        color: var(--color-surface);
+        transform: scale(1.02);
+        box-shadow: var(--shadow-md);
+      }
+      .button.active > span {
+        color: transparent;
       }
 
       #playground {
@@ -85,8 +129,10 @@
       }
       renderAll();
 
-      function changeExample(example) {
-        console.log(example);
+      function changeExample(example, currentButton) {
+        document.querySelectorAll('.button').forEach((item) => item.classList.remove('active'));
+        currentButton.classList.add('active');
+
         switch (example) {
           case 1:
             document.querySelector('#playground').innerHTML = Exemplo1();
