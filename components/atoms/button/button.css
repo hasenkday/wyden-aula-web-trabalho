@@ -1,4 +1,6 @@
 .button {
+  border: none;
+  outline: none;
   cursor: pointer;
   padding: 16px 20px;
   background: var(--color-surface);
@@ -9,7 +11,13 @@
   display: flex;
   gap: 20px;
   justify-content: space-between;
+  width: max-content;
 }
+
+.button.fill {
+  width: 100%;
+}
+
 .button span {
   color: transparent;
 }
@@ -32,4 +40,21 @@
 }
 .button.active > span {
   color: transparent;
+}
+
+.button.md {
+  padding: 12px 16px;
+}
+
+.button.default {
+  background: var(--color-background);
+  color: var(--color-primary-500);
+}
+
+/* .button.default:focus {
+  outline: 2px solid var(--color-focus);
+} */
+
+.button.default:active {
+  filter: brightness(90%);
 }
