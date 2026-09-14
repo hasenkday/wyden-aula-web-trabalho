@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="styles/main.css" />
 
     <script src="utils/storage.js"></script>
-    <script src="./components/atoms/badge/badge.js"></script>
     <script src="./components/organisms/header-nav/header-nav.js"></script>
     <script src="./components/organisms/frog-head/frog-head.js"></script>
+    <script src="./components/organisms/dot-timeline/dot-timeline.js"></script>
+    <script src="./components/atoms/badge/badge.js"></script>
     <script src="./components/organisms/footer/footer.js"></script>
   </head>
 
@@ -39,11 +40,13 @@
               <img
                 src="https://media.licdn.com/dms/image/v2/D4D03AQGW6Jtb4JghIQ/profile-displayphoto-scale_400_400/B4DZvnYIIhJgAg-/0/1769113422412?e=1789603200&v=beta&t=vnOf1Oiyxwg8oz5uieOiLH3op6b83aswVj-_cVInhNE"
                 style="
-                  transform: translate(-70%, -50%) scale(2) rotate(10deg);
+                  transform: translate(-70%, -50%) scale(1.2) rotate(10deg);
                   top: 50%;
                   left: 50%;
                   object-fit: cover;
-                  width: inherit;
+                  height: 100%;
+                  width: auto;
+                  max-width: none;
                   position: absolute;
                 "
               />
@@ -77,51 +80,13 @@
 
         <div class="section-card">
           <h3 style="font-size: 20px">Experiência profissional</h3>
-          <div class="flex-col" style="gap: 40px">
-            <div>
-              <span style="color: var(--color-secondary-300); font-size: var(--font-size-small)">
-                Ago 2026 até o momento
-              </span>
-              <h5>Desiner UX/UI & Front-end Dev</h5>
-              <ul>
-                <li>Design e desenvolvimento de melhorias UX/UI;</li>
-                <li>Produtos B2B e B2C do ramo financeiro.</li>
-              </ul>
-              <span style="color: var(--color-text-muted); font-size: var(--font-size-small)">
-                Estágio  •  Remoto, RJ
-              </span>
-            </div>
-
-            <div>
-              <span style="color: var(--color-text-muted); font-size: var(--font-size-small)">
-                Nov 2024 - Ago 2026 (1 ano e 10 meses)
-              </span>
-              <h5>Designer de Produto & Consultoria UX/UI</h5>
-              <ul>
-                <li>Design de plataformas ERP interno, produtos B2B, B2C e B2B2C;</li>
-                <li>Produtos web e mobile voltados para formaturas e eventos.</li>
-              </ul>
-              <span style="color: var(--color-text-muted); font-size: var(--font-size-small)">
-                Contrato PJ • Remoto, Bauru-SP
-              </span>
-            </div>
-
-            <div>
-              <span style="color: var(--color-text-muted); font-size: var(--font-size-small)">
-                Jan 2020 - Abr 2025 (5 anos e 4 meses)
-              </span>
-              <h5>Designer UX/UI & Full-stack Dev</h5>
-              <ul>
-                <li>Desenvolvimento de ERP interno;</li>
-                <li>Design System de plataformas B2C e para ferramenta de revisão de código IA;</li>
-                <li>Produtos voltados para o nicho de desenvolvimento.</li>
-              </ul>
-              <span style="color: var(--color-text-muted); font-size: var(--font-size-small)">
-                Contrato PJ, Híbrido, Bauru-SP
-              </span>
-            </div>
+          <div class="flex-col" style="gap: 0px">
+            <div id="dot-timeline-1"></div>
+            <div id="dot-timeline-2"></div>
+            <div id="dot-timeline-3"></div>
           </div>
         </div>
+
         <div class="section-card">
           <h3 style="font-size: 20px">Experiência acadêmica</h3>
           <div class="flex-row academic_section">
@@ -304,6 +269,10 @@
         .resume .lang_section .others {
           display: none;
         }
+
+        .photo img {
+          transform: translate(-60%, -50%) scale(1.2) rotate(10deg) !important;
+        }
       }
 
       @media screen and (max-width: 756px) {
@@ -323,6 +292,55 @@
 
         document.querySelector('#frog-head').innerHTML = FrogHead();
         document.querySelector('#footer').innerHTML = Footer();
+
+        document.querySelector('#dot-timeline-1').innerHTML = DotTimeline({
+          index: 0,
+          isFirst: true,
+          isLast: false,
+          image: 'assets/inoa-logo.png',
+          metadataDate: 'Ago 2026 até o momento',
+          title: 'Desiner UX/UI & Front-end Dev',
+          description: `
+            <ul>
+              <li>Design e desenvolvimento de melhorias UX/UI;</li>
+              <li>Produtos B2B e B2C do ramo financeiro.</li>
+            </ul>
+          `,
+          metadataLocation: 'Estágio  •  Remoto, RJ',
+        });
+
+        document.querySelector('#dot-timeline-2').innerHTML = DotTimeline({
+          index: 1,
+          isFirst: false,
+          isLast: false,
+          image: './assets/tico-logo.png',
+          metadataDate: 'Nov 2024 - Ago 2026 (1 ano e 10 meses)',
+          title: 'Designer de Produto & Consultoria UX/UI',
+          description: `
+            <ul>
+              <li>Design de plataformas ERP interno, produtos B2B, B2C e B2B2C;</li>
+              <li>Produtos web e mobile voltados para formaturas e eventos.</li>
+            </ul>
+          `,
+          metadataLocation: 'Contrato PJ • Remoto, Bauru-S',
+        });
+
+        document.querySelector('#dot-timeline-3').innerHTML = DotTimeline({
+          index: 2,
+          isFirst: false,
+          isLast: true,
+          image: './assets/kodus-logo.png',
+          metadataDate: 'Jan 2020 - Abr 2025 (5 anos e 4 meses)',
+          title: 'Designer UX/UI & Full-stack Dev',
+          description: `
+            <ul>
+              <li>Desenvolvimento de ERP interno;</li>
+              <li>Design System de plataformas B2C e para ferramenta de revisão de código IA;</li>
+              <li>Produtos voltados para o nicho de desenvolvimento.</li>
+            </ul>
+          `,
+          metadataLocation: 'Contrato PJ, Híbrido, Bauru-SP',
+        });
       }
 
       renderAll();
