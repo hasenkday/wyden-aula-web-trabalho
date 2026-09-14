@@ -4,7 +4,7 @@
 }
 
 .head {
-  width: 100vw;
+  width: 100%;
   height: 250px;
   box-shadow: var(--shadow-lg);
   position: relative;
@@ -24,7 +24,7 @@
 .eyes {
   z-index: -1;
   position: absolute;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   top: -150px;
@@ -86,7 +86,7 @@
 /* Responsivity */
 @media screen and (max-width: 1080px) {
   .eyes {
-    top: -90px;
+    top: -60px;
   }
 
   .eye-left,
@@ -98,7 +98,7 @@
 
 @media screen and (max-width: 756px) {
   .eyes {
-    top: -90px;
+    top: -30px;
   }
 
   .eye-left,

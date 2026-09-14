@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>Nadia | Portal - Dev Web</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+
+    <script src="utils/storage.js"></script>
+    <script src="./components/organisms/header-nav/header-nav.js"></script>
+    <script src="./components/organisms/frog-head/frog-head.js"></script>
+    <script src="./components/organisms/footer/footer.js"></script>
+
+    <script src="./projects/aula-5/exemplos.js"></script>
+  </head>
+
+  <body>
+    <header id="header-nav" class="header-nav"></header>
+    <div id="frog-head"></div>
+
+    <h2 class="content-headline">Aula 5: Roteiro 4 - Lógica JS</h2>
+    <div class="aula5 content">
+      <div class="container">
+        <p style="text-align: center">
+          Abra o <b>Console</b> do navegador (F12) para ver mensagens de <code>console.log</code>.
+          Clique e teste cada exemplo.
+        </p>
+
+        <h3>Exemplos</h3>
+
+        <div class="grid-cols-2">
+          <section id="sec-variaveis" class="section-card">
+            <div class="flex-col">
+              <h4>1) Variáveis, tipos e saída</h4>
+              <button onclick="ex1()" class="button default md">Rodar exemplo</button>
+              <div id="output-variaveis" class="output"></div>
+            </div>
+          </section>
+
+          <section id="sec-io" class="section-card">
+            <h4>2) Entrada e saída</h4>
+            <button onclick="ex2()" class="button default md">Perguntar nome</button>
+          </section>
+
+          <section id="sec-if" class="section-card">
+            <h4>3) Decisão: if / else</h4>
+            <div class="flex-row">
+              <input id="idade" type="number" placeholder="Digite sua idade" />
+              <button onclick="ex3()" class="button default md">Verificar maioridade</button>
+            </div>
+            <div id="output-if" class="output"></div>
+          </section>
+
+          <section id="sec-loops" class="section-card">
+            <h4>4) Laços: for e while</h4>
+            <div class="flex-row">
+              <button onclick="ex4For()" class="button default md">Contar 1 a 5 (for)</button>
+              <button onclick="ex4While()" class="button default md">Contar 5 a 1 (while)</button>
+            </div>
+            <div id="output-loops" class="output"></div>
+          </section>
+
+          <section id="sec-array" class="section-card">
+            <h4>5) Arrays (listas)</h4>
+            <div class="flex-col">
+              <button onclick="ex5()" class="button default md">Listar frutas</button>
+              <div id="output-array" class="output"></div>
+            </div>
+          </section>
+
+          <section id="sec-funcoes" class="section-card">
+            <h4>6) Funções (reaproveitar código)</h4>
+            <div class="flex-row">
+              <input id="a" type="number" placeholder="A (número)" />
+              <input id="b" type="number" placeholder="B (número)" />
+              <button onclick="ex6()" class="button default md">Somar A + B</button>
+            </div>
+            <div id="output-funcao" class="output"></div>
+          </section>
+
+          <section id="sec-dom" class="section-card">
+            <h4>7) Eventos & DOM</h4>
+            <div class="flex-row">
+              <input id="n1" type="number" placeholder="Número 1" />
+              <input id="n2" type="number" placeholder="Número 2" />
+            </div>
+            <div class="flex-row">
+              <button onclick="calc('+')" class="button default md flex-1">Somar</button>
+              <button onclick="calc('-')" class="button default md flex-1">Subtrair</button>
+              <button onclick="calc('*')" class="button default md flex-1">Multiplicar</button>
+              <button onclick="calc('/')" class="button default md flex-1">Dividir</button>
+            </div>
+            <div id="output-calc" class="output"></div>
+          </section>
+
+          <section id="sec-game" class="section-card">
+            <h4>8) Mini-desafio: jogo de adivinhação</h4>
+            <div class="flex-row">
+              <input id="palpite" type="number" placeholder="Seu palpite (1-10)" />
+              <button onclick="tentar()" class="button default md">Tentar</button>
+              <button onclick="reiniciar()" class="button outline md">Reiniciar jogo</button>
+            </div>
+            <div id="output-game" class="output"></div>
+          </section>
+        </div>
+
+        <h3 class="mt-md">Exercícios feitos em aula</h3>
+
+        <div class="grid-cols-2">
+          <section id="sec-variaveis" class="section-card">
+            <div class="flex-col">
+              <h4>1. Maior de dois números via prompt (exiba no alert e no DOM)</h4>
+            </div>
+          </section>
+
+          <section id="sec-variaveis" class="section-card">
+            <div class="flex-col">
+              <h4>2. Tabuada do 7 (mostre no DOM com quebras de linha)</h4>
+            </div>
+          </section>
+
+          <section id="sec-variaveis" class="section-card">
+            <div class="flex-col">
+              <h4>3. Filtrar nomes que começam com “A” em um array e exibí-los.</h4>
+            </div>
+          </section>
+
+          <section id="sec-variaveis" class="section-card">
+            <div class="flex-col">
+              <h4>
+                4. Função media(a,b,c): <br />- imprimir “Aprovado” se média ≥ 6; <br />
+                - senão “Recuperação/Reprovado”.
+              </h4>
+            </div>
+          </section>
+
+          <section id="sec-variaveis" class="section-card">
+            <div class="flex-col">
+              <h4>5. Adicionar potência (**) na calculadora com botão dedicado.</h4>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .output {
+        background: #f7f7f9;
+        border: 1px solid #e5e5e5;
+        padding: 10px;
+        border-radius: 8px;
+        min-height: 26px;
+        white-space: pre-wrap;
+        flex: 1;
+      }
+
+      .aula5 h3 {
+        text-align: center;
+      }
+
+      .aula5 h4 {
+        font-weight: var(--font-weight-semibold);
+      }
+
+      .aula5 .flex-row {
+        max-width: 100%;
+        flex-wrap: wrap;
+      }
+
+      .aula5 input[type='number'] {
+        max-width: 100%;
+        min-width: 120px;
+        flex: 1;
+      }
+
+      .aula5 .section-card {
+        opacity: 50%;
+        transition: all 200ms ease-out;
+        filter: grayscale(1);
+      }
+
+      .aula5 .section-card:hover {
+        opacity: 100%;
+        background: #fff;
+        filter: grayscale(0);
+      }
+
+      .aula5 .button {
+        justify-content: center;
+      }
+    </style>
+
+    <footer id="footer"></footer>
+
+    <script>
+      function renderAll() {
+        document.querySelector('#header-nav').innerHTML = HeaderNav();
+        HeaderNavPillAnimation();
+
+        document.querySelector('#frog-head').innerHTML = FrogHead();
+        document.querySelector('#footer').innerHTML = Footer();
+      }
+
+      renderAll();
+    </script>
+  </body>
+</html>

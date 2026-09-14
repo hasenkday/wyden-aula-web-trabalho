@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
 
     <title>Nadia | Portal - Dev Web</title>
 
@@ -30,37 +31,37 @@
     <div id="frog-head"></div>
 
     <h2 class="content-headline">Aula 3: Introdução a DIV e CSS</h2>
-    <div class="content aula3">
+    <div class="aula4 content">
       <div class="container">
         <div class="examples">
-          <div onclick="changeExample(1, this)" class="button active">
+          <div onclick="changeExample(1, this)" class="button fill active">
             Exemplo 1 - DIV e CSS <span>🡢</span>
           </div>
-          <div onclick="changeExample(2, this)" class="button">
+          <div onclick="changeExample(2, this)" class="button fill">
             Exemplo 2 - Várias DIVs <span>🡢</span>
           </div>
-          <div onclick="changeExample(3, this)" class="button">
+          <div onclick="changeExample(3, this)" class="button fill">
             Exemplo 3 - Cores <span>🡢</span>
           </div>
-          <div onclick="changeExample(4, this)" class="button">
+          <div onclick="changeExample(4, this)" class="button fill">
             Exemplo 4 - Imagem <span>🡢</span>
           </div>
-          <div onclick="changeExample(5, this)" class="button">
+          <div onclick="changeExample(5, this)" class="button fill">
             Exemplo 5 - Bordas arredondadas <span>🡢</span>
           </div>
-          <div onclick="changeExample(6, this)" class="button">
+          <div onclick="changeExample(6, this)" class="button fill">
             Exemplo 6 - Sombra <span>🡢</span>
           </div>
-          <div onclick="changeExample(7, this)" class="button">
+          <div onclick="changeExample(7, this)" class="button fill">
             Exemplo 7 - Centralizado <span>🡢</span>
           </div>
-          <div onclick="changeExample(8, this)" class="button">
+          <div onclick="changeExample(8, this)" class="button fill">
             Exemplo 8 - Flexbox <span>🡢</span>
           </div>
-          <div onclick="changeExample(9, this)" class="button">
+          <div onclick="changeExample(9, this)" class="button fill">
             Exemplo 9 - Hover <span>🡢</span>
           </div>
-          <div onclick="changeExample(10, this)" class="button">
+          <div onclick="changeExample(10, this)" class="button fill">
             Exemplo 10 - Responsivo <span>🡢</span>
           </div>
         </div>
@@ -85,18 +86,19 @@
         gap: 12px;
         overflow: auto;
         height: 100%;
+        flex: 1;
       }
 
-      .aula3 container {
+      .aula4 .container {
         flex-direction: row;
       }
 
       @media screen and (max-width: 1080px) {
-        .aula3 container {
+        .aula4 .container {
           flex-direction: column;
         }
 
-        .aula3 .examples {
+        .aula4 .examples {
           display: grid;
           grid-template-columns: 1fr 1fr;
         }
