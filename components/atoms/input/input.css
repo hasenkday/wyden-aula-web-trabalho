@@ -1,0 +1,25 @@
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+input[type='tel'] {
+  border: 1px solid var(--color-focus);
+  outline: none;
+  padding: 12px 16px;
+  background: #fff;
+  border-radius: 12px;
+  font-weight: var(--font-weight-normal);
+  color: var(--color-primary-400);
+  transition: all 200ms ease-out;
+  width: 100%;
+}
+
+input[type='text']:focus,
+input[type='number']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
+input[type='search']:focus,
+input[type='tel']:focus {
+  outline: 1px solid var(--color-focus);
+}

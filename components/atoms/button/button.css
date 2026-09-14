@@ -58,3 +58,12 @@
 .button.default:active {
   filter: brightness(90%);
 }
+
+.button.outline {
+  background: transparent;
+  border: 1px solid var(--color-background);
+  color: var(--color-primary-500);
+}
+.button.outline:active {
+  filter: brightness(90%);
+}
