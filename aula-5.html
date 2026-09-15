@@ -15,6 +15,7 @@
     <script src="./components/organisms/footer/footer.js"></script>
 
     <script src="./projects/aula-5/exemplos.js"></script>
+    <script src="./projects/aula-5/exercicios.js"></script>
   </head>
 
   <body>
@@ -113,18 +114,69 @@
           <section id="sec-variaveis" class="section-card">
             <div class="flex-col">
               <h4>1. Maior de dois números via prompt (exiba no alert e no DOM)</h4>
+              <div class="flex-row">
+                <input id="exercise1-n1" type="number" placeholder="Número 1" />
+                <input id="exercise1-n2" type="number" placeholder="Número 2" />
+                <button onclick="exercise1()" class="button default md flex-1">Comparar</button>
+              </div>
+              <div id="output-exercise1" class="output"></div>
             </div>
           </section>
 
           <section id="sec-variaveis" class="section-card">
             <div class="flex-col">
-              <h4>2. Tabuada do 7 (mostre no DOM com quebras de linha)</h4>
+              <h4>2. Tabuada (mostre no DOM com quebras de linha)</h4>
+              <div class="flex-row">
+                <input id="exercise2-value" type="number" placeholder="Digite um número" />
+                <button onclick="exercise2()" class="button default md">Gerar a tabuada</button>
+              </div>
+              <div id="output-exercise2" class="output"></div>
             </div>
           </section>
 
           <section id="sec-variaveis" class="section-card">
             <div class="flex-col">
               <h4>3. Filtrar nomes que começam com “A” em um array e exibí-los.</h4>
+              <div class="flex-row">
+                <input
+                  id="exercise3-name1"
+                  type="text"
+                  placeholder="Digite um nome"
+                  value="Lucas"
+                />
+                <input
+                  id="exercise3-name2"
+                  type="text"
+                  placeholder="Digite um nome"
+                  value="Amanda"
+                />
+                <input
+                  id="exercise3-name3"
+                  type="text"
+                  placeholder="Digite um nome"
+                  value="Samuel"
+                />
+                <input
+                  id="exercise3-name4"
+                  type="text"
+                  placeholder="Digite um nome"
+                  value="Alice"
+                />
+                <input
+                  id="exercise3-name5"
+                  type="text"
+                  placeholder="Digite um nome"
+                  value="Luana"
+                />
+                <input
+                  id="exercise3-name6"
+                  type="text"
+                  placeholder="Digite um nome"
+                  value="Anthony"
+                />
+              </div>
+              <button onclick="exercise3()" class="button default fill">Filtrar nomes</button>
+              <div id="output-exercise3" class="output"></div>
             </div>
           </section>
 
@@ -134,12 +186,55 @@
                 4. Função media(a,b,c): <br />- imprimir “Aprovado” se média ≥ 6; <br />
                 - senão “Recuperação/Reprovado”.
               </h4>
+              <div class="flex-row">
+                <input
+                  id="exercise4-n1"
+                  type="number"
+                  min="0"
+                  max="10"
+                  oninput="
+                    if (this.value < 0) this.value = 0;
+                    if (this.value > 10) this.value = 10;
+                  "
+                  placeholder="Nota A"
+                />
+                <input
+                  id="exercise4-n2"
+                  type="number"
+                  min="0"
+                  max="10"
+                  oninput="
+                    if (this.value < 0) this.value = 0;
+                    if (this.value > 10) this.value = 10;
+                  "
+                  placeholder="Nota B"
+                />
+                <input
+                  id="exercise4-n3"
+                  type="number"
+                  min="0"
+                  max="10"
+                  oninput="
+                    if (this.value < 0) this.value = 0;
+                    if (this.value > 10) this.value = 10;
+                  "
+                  placeholder="Nota C"
+                />
+                <button onclick="exercise4()" class="button default fill">Calcular média</button>
+              </div>
+              <div id="output-exercise4" class="output"></div>
             </div>
           </section>
 
           <section id="sec-variaveis" class="section-card">
             <div class="flex-col">
               <h4>5. Adicionar potência (**) na calculadora com botão dedicado.</h4>
+              <div class="flex-row">
+                <input id="exercise5-base" type="number" placeholder="Base" />
+                <input id="exercise5-expoente" type="number" placeholder="Expoente" />
+                <button onclick="exercise5()" class="button default md">**</button>
+              </div>
+              <div id="output-exercise5" class="output"></div>
             </div>
           </section>
         </div>
@@ -170,7 +265,8 @@
         flex-wrap: wrap;
       }
 
-      .aula5 input[type='number'] {
+      .aula5 input[type='number'],
+      .aula5 input[type='text'] {
         max-width: 100%;
         min-width: 120px;
         flex: 1;
