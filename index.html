@@ -46,23 +46,26 @@
         document.querySelector('#footer').innerHTML = Footer();
 
         document.querySelector('#callout').innerHTML = Callout({
-          title: 'Portal Prático da turma de desenvolvimento Web',
+          title: 'Portal Prático da Turma de Desenvolvimento Web',
           description: `
-            Este roteiro foi projetado para elevar o nível estético e estrutural 
+            Este projeto foi projetado para elevar o nível estético e estrutural 
             das nossas páginas web. Explore as seções do portal para verificar a evolução
             do uso de CSS, layouts responsivos e novos elementos interativos.
           `,
           color: 'var(--color-primary-400)',
         });
+
         document.querySelector('#card1').innerHTML = Card({
-          title: 'Aulas 01 - Mini Corrida',
+          title: 'Mini Corrida',
+          subtitle: 'Roteiro 0',
           description: 'Mini jogo de corrida demonstrando o uso de HTML e CSS3.',
           buttonLabel: 'Ver Corrida &rarr;',
-          cardUrl: 'aula-1.html',
+          cardUrl: 'roteiro-0.html',
         });
 
         document.querySelector('#card2').innerHTML = Card({
-          title: 'Aulas 02 e 03 - Fundamentos',
+          title: ' Mini Currículo',
+          subtitle: 'Roteiros 1 e 2',
           description:
             'Estrutura básica de tags HTML, uso do Bloco de Notas e publicação estática via Netlify.',
           buttonLabel: 'Ver Currículo &rarr;',
@@ -70,19 +73,21 @@
         });
 
         document.querySelector('#card3').innerHTML = Card({
-          title: 'Aula 04 - Design & CSS',
+          title: 'Exemplos de Design & CSS',
+          subtitle: 'Roteiro 3',
           description:
             'Estilização com CSS3, conceitos de box model, cores modernas, tipografia e novos componentes visualmente atraentes.',
           buttonLabel: 'Ver Exemplos &rarr;',
-          cardUrl: 'aula-4.html',
+          cardUrl: 'roteiro-3.html',
         });
 
         document.querySelector('#card4').innerHTML = Card({
-          title: 'Aula 05 - Roteiro 4 - Lógica JS',
+          title: 'Exemplos de Lógica JS',
+          subtitle: 'Roteiro 4',
           description:
             'Uma página com exemplos práticos de lógica de programação em JavaScript, mostrando variáveis, entrada/saída, decisões, laços, arrays, funções, DOM e um mini-jogo.',
           buttonLabel: 'Ver Exemplos &rarr;',
-          cardUrl: 'aula-5.html',
+          cardUrl: 'roteiro-4.html',
         });
       }
 
