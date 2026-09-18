@@ -31,6 +31,7 @@
           <div id="card2"></div>
           <div id="card3"></div>
           <div id="card4"></div>
+          <div id="card5"></div>
         </div>
       </div>
     </div>
@@ -88,6 +89,18 @@
             'Uma página com exemplos práticos de lógica de programação em JavaScript, mostrando variáveis, entrada/saída, decisões, laços, arrays, funções, DOM e um mini-jogo.',
           buttonLabel: 'Ver Exemplos &rarr;',
           cardUrl: 'roteiro-4.html',
+        });
+
+        document.querySelector('#card5').innerHTML = Card({
+          title: 'JS Externo, Manipulação de DOM e LocalStorage',
+          subtitle: 'Roteiro 5',
+          description: `
+            Evoluir a lógica de programação para o padrão de mercado: 
+            separando as camadas em arquivos externos manipulando o DOM por meio de escutadores de eventos ('addEventListener')
+            e implementando persistência de dados no navegador utilizando 'localStorage'.
+          `,
+          buttonLabel: 'Ver Exemplos &rarr;',
+          cardUrl: 'roteiro-5.html',
         });
       }
 
