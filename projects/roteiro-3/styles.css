@@ -1,0 +1,30 @@
+.examples {
+  display: flex;
+  flex: 1;
+  gap: 8px;
+  flex-direction: column;
+}
+
+#playground {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: auto;
+  height: 100%;
+  flex: 1;
+}
+
+.roteiro-3 .container {
+  flex-direction: row;
+}
+
+@media screen and (max-width: 1080px) {
+  .roteiro-3 .container {
+    flex-direction: column;
+  }
+
+  .roteiro-3 .examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

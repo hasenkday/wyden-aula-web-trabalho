@@ -7,15 +7,8 @@
 
     <title>Nadia | Portal - Dev Web</title>
 
-    <link rel="stylesheet" href="styles/main.css" />
-
-    <script src="utils/storage.js"></script>
-    <script src="./components/organisms/header-nav/header-nav.js"></script>
-    <script src="./components/organisms/frog-head/frog-head.js"></script>
-    <script src="./components/organisms/footer/footer.js"></script>
-
-    <script src="./projects/roteiro-4/exemplos.js"></script>
-    <script src="./projects/roteiro-4/exercicios.js"></script>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./projects/roteiro-4/styles.css" />
   </head>
 
   <body>
@@ -241,66 +234,10 @@
       </div>
     </div>
 
-    <style>
-      .output {
-        background: #f7f7f9;
-        border: 1px solid #e5e5e5;
-        padding: 10px;
-        border-radius: 8px;
-        min-height: 26px;
-        white-space: pre-wrap;
-        flex: 1;
-      }
-
-      .roteiro-4 h3 {
-        text-align: center;
-      }
-
-      .roteiro-4 h4 {
-        font-weight: var(--font-weight-semibold);
-      }
-
-      .roteiro-4 .flex-row {
-        max-width: 100%;
-        flex-wrap: wrap;
-      }
-
-      .roteiro-4 input[type='number'],
-      .roteiro-4 input[type='text'] {
-        max-width: 100%;
-        min-width: 120px;
-        flex: 1;
-      }
-
-      .roteiro-4 .section-card {
-        opacity: 50%;
-        transition: all 200ms ease-out;
-        filter: grayscale(1);
-      }
-
-      .roteiro-4 .section-card:hover {
-        opacity: 100%;
-        background: #fff;
-        filter: grayscale(0);
-      }
-
-      .roteiro-4 .button {
-        justify-content: center;
-      }
-    </style>
-
     <footer id="footer"></footer>
 
-    <script>
-      function renderAll() {
-        document.querySelector('#header-nav').innerHTML = HeaderNav();
-        HeaderNavPillAnimation();
-
-        document.querySelector('#frog-head').innerHTML = FrogHead();
-        document.querySelector('#footer').innerHTML = Footer();
-      }
-
-      renderAll();
-    </script>
+    <script src="./utils/render-base-layout.js" type="module"></script>
+    <script src="./projects/roteiro-4/exemplos.js"></script>
+    <script src="./projects/roteiro-4/exercicios.js"></script>
   </body>
 </html>

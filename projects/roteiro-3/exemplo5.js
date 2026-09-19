@@ -1,4 +1,4 @@
-function Exemplo5() {
+export function Exemplo5() {
   return `
         <h3>Bordas Arredondadas</h3>
         <div class="caixa">Sou arredondada!</div>

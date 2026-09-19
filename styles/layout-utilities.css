@@ -66,6 +66,18 @@
   flex: 1;
 }
 
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
 /* Responsivity */
 
 @media screen and (max-width: 1080px) {

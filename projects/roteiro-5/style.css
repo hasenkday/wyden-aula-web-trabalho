@@ -1,54 +1,40 @@
-/* :root {
-  --bg-color: #f7f7f9;
-  --card-bg: #ffffff;
-  --text-color: #333333;
-  --border-color: #dddddd;
-  --primary: #0066cc;
-  --danger: #dc3545;
-}
-
 body.dark-mode {
-  --bg-color: #1e1e2e;
-  --card-bg: #2d2d3d;
-  --text-color: #f1f1f1;
-  --border-color: #444454;
-  --primary: #3b82f6;
-  --danger: #ef4444;
+  --color-background: var(--color-primary-300);
+  --color-surface: var(--color-neutral-600);
+
+  --color-text: var(--color-neutral-100);
+  --color-text-muted: var(--color-neutral-200);
+
+  --color-border: var(--color-neutral-500);
+
+  --color-heading: var(--color-neutral-100);
+  --color-link: var(--color-secondary-300);
+
+  --color-focus: var(--color-primary-300);
 }
 
 body {
-  font-family: system-ui, Arial, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-  line-height: 1.5;
   transition:
-    background-color 0.3s,
-    color 0.3s;
+    background-color 0.3s ease-out,
+    color 0.3s ease-out;
 }
 
-header {
+/* header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 24px;
-}
+} */
 
-section {
+/* section {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 20px;
   margin: 18px 0;
-}
+} */
 
-.field-group {
-  display: flex;
-  gap: 10px;
-}
-
+/* 
 input[type='text'] {
   flex: 1;
   padding: 10px;
@@ -56,9 +42,9 @@ input[type='text'] {
   border: 1px solid var(--border-color);
   background-color: var(--card-bg);
   color: var(--text-color);
-}
+} */
 
-button {
+/* button {
   padding: 10px 16px;
   border-radius: 8px;
   border: none;
@@ -66,38 +52,38 @@ button {
   color: #fff;
   cursor: pointer;
   font-weight: bold;
-}
+} */
 
-button.btn-danger {
+/* button.btn-danger {
   background-color: var(--danger);
-}
+} */
 
-.error {
+/* .error {
   color: var(--danger);
-  display: block;
+  display: none;
   margin-top: 6px;
-}
+} */
 
-ul {
+/* .roteiro-5 ul {
   list-style: none;
   padding: 0;
   margin-top: 15px;
-}
+} */
 
-li {
+/* .roteiro-5 li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid var(--border-color);
-}
+} */
 
-li.concluida span {
+/* .roteiro-5 li.concluida span {
   text-decoration: line-through;
   opacity: 0.6;
-}
+} */
 
-.btn-remove {
+/* .roteiro-5 .btn-remove {
   background-color: transparent;
   color: var(--danger);
   border: 1px solid var(--danger);

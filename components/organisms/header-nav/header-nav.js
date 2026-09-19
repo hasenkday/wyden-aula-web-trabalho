@@ -1,4 +1,4 @@
-function HeaderNav() {
+export function HeaderNav() {
   return `
     <header>
         <h1>Portal de Desenvolvimento Web</h1>
@@ -21,12 +21,7 @@ function getCurrentPage() {
   return window.location.pathname.split('/').pop() || 'index.html';
 }
 
-function moveNavPill(pill, link) {
-  pill.style.left = `${link.offsetLeft}px`;
-  pill.style.width = `${link.offsetWidth}px`;
-}
-
-function HeaderNavPillAnimation() {
+export function HeaderNavPillAnimation() {
   const nav = document.querySelector('nav');
   const pill = nav.querySelector('.nav-pill');
   const links = [...nav.querySelectorAll('a')];

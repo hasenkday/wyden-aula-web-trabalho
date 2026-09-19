@@ -1,4 +1,4 @@
-function Exemplo8() {
+export function Exemplo8() {
   return `
         <h3>Caixas em Flexbox</h3>
         <div class="box-container">

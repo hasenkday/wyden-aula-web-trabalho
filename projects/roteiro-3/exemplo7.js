@@ -1,4 +1,4 @@
-function Exemplo7() {
+export function Exemplo7() {
   return `
         <h3>Centralizado</h3>
         <div class="caixa">Centro!</div>

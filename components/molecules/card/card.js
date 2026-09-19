@@ -1,4 +1,4 @@
-function Card({
+export function Card({
   title = 'Card title',
   subtitle = 'teste',
   description = 'Describe what this card do',

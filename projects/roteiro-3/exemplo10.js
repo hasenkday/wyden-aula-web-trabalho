@@ -1,4 +1,4 @@
-function Exemplo10() {
+export function Exemplo10() {
   return `
         <h3>Responsivo</h3>
         <p class="text">
