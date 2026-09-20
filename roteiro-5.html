@@ -20,27 +20,27 @@
       <div class="container">
         <section class="section-card flex-row items-center justify-between">
           <h3>Gerenciador de Tarefas e Preferências</h3>
-          <button id="btn-tema" class="button default md" style="align-self: center">
-            Alterar Tema
+          <button id="theme-button" class="button default md" style="align-self: center">
+            Alterar Tema dos Cards
           </button>
         </section>
 
-        <!-- <section id="sec-form" class="section-card">
+        <section class="section-card">
           <h3>1) Cadastrar Nova Tarefa</h3>
-          <form id="form-tarefa" class="flex-row">
-            <input id="input-tarefa" type="text" placeholder="Digite uma nova tarefa..." required />
+          <form id="tasks-form" class="flex-row">
+            <input id="task-input" type="text" placeholder="Digite uma nova tarefa..." required />
             <button type="submit" class="button default md">Adicionar</button>
           </form>
-          <small id="erro-msg" class="error"></small>
-        </section> -->
+          <small id="error-msg" class="error"></small>
+        </section>
 
-        <!-- <section id="sec-lista" class="section-card">
-          <h2>2) Minhas Tarefas (Persistidas no LocalStorage)</h2>
-          <div class="actions">
-            <button id="btn-limpar" class="btn-danger">Limpar Todas</button>
+        <section class="section-card">
+          <div class="flex-row items-center justify-between">
+            <h3>2) Minhas Tarefas (Persistidas no LocalStorage)</h3>
+            <button id="btn-limpar" class="button default md btn-danger">Limpar Todas</button>
           </div>
-          <ul id="lista-tarefas"></ul>
-        </section> -->
+          <ul id="tasks-list" class="output"></ul>
+        </section>
       </div>
     </div>
 
