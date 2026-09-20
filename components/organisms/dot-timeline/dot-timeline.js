@@ -1,4 +1,4 @@
-function DotTimeline({
+export function DotTimeline({
   index,
   isFirst,
   isLast,

@@ -7,12 +7,7 @@
 
     <title>Nadia | Portal - Dev Web</title>
 
-    <link rel="stylesheet" href="styles/main.css" />
-
-    <script src="utils/storage.js"></script>
-    <script src="./components/organisms/header-nav/header-nav.js"></script>
-    <script src="./components/organisms/frog-head/frog-head.js"></script>
-    <script src="./components/organisms/footer/footer.js"></script>
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
 
   <body>
@@ -32,16 +27,6 @@
 
     <footer id="footer"></footer>
 
-    <script>
-      function renderAll() {
-        document.querySelector('#header-nav').innerHTML = HeaderNav();
-        HeaderNavPillAnimation();
-
-        document.querySelector('#frog-head').innerHTML = FrogHead();
-        document.querySelector('#footer').innerHTML = Footer();
-      }
-
-      renderAll();
-    </script>
+    <script src="./utils/render-base-layout.js" type="module"></script>
   </body>
 </html>

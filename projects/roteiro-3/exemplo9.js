@@ -1,4 +1,4 @@
-function Exemplo9() {
+export function Exemplo9() {
   return `
         <h3>Efeito Hover</h3>
         <div class="caixa">Passe o mouse!</div>

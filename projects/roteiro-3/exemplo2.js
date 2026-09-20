@@ -1,4 +1,4 @@
-function Exemplo2() {
+export function Exemplo2() {
   return `
         <h3>Diversas Caixinhas</h3>
         <div class="box-container">

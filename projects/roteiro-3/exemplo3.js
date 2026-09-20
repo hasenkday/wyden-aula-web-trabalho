@@ -1,4 +1,4 @@
-function Exemplo3() {
+export function Exemplo3() {
   return `
         <h3>Exemplo 3 - Cores</h3>
         <div class="vermelha"></div>

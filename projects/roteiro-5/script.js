@@ -1,49 +1,39 @@
-// Captura de Elementos do DOM
-const formTarefa = document.getElementById('form-tarefa');
-const inputTarefa = document.getElementById('input-tarefa');
-const listaTarefas = document.getElementById('lista-tarefas');
-const erroMsg = document.getElementById('erro-msg');
-const btnLimpar = document.getElementById('btn-limpar');
-const btnTema = document.getElementById('btn-tema');
+import { LocalStorage } from '../../utils/storage.js';
 
-// Estado da Aplicação
+const formTarefa = document.getElementById('tasks-form');
+const inputTarefa = document.getElementById('task-input');
+const listaTarefas = document.getElementById('tasks-list');
+
+const erroMsg = document.getElementById('error-msg');
+const btnLimpar = document.getElementById('btn-limpar');
+
+const themeButton = document.getElementById('theme-button');
+
+// Estado inicial da Aplicação
 let tarefas = JSON.parse(localStorage.getItem('tarefas_app')) || [];
 
-// 1. Inicialização
-document.addEventListener('DOMContentLoaded', () => {
-  carregarTema();
-  renderizarTarefas();
-});
+const savedTheme = LocalStorage.get('dark_theme');
+document.body.classList.toggle('dark-theme', savedTheme == 'true');
 
-// 2. Escutadores de Eventos (addEventListener)
-formTarefa.addEventListener('submit', (e) => {
-  e.preventDefault(); // Impede o recarregamento da página
-  adicionarTarefa();
-});
-
-btnLimpar.addEventListener('click', () => {
-  if (confirm('Tem certeza que deseja apagar todas as tarefas?')) {
-    tarefas = [];
-    salvarERenderizar();
+function carregarTema() {
+  const eEscuro = JSON.parse(localStorage.getItem('dark_theme'));
+  if (eEscuro) {
+    document.body.classList.add('dark-theme');
   }
-});
+}
 
-btnTema.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  const eEscuro = document.body.classList.contains('dark-mode');
-  localStorage.setItem('tema_escuro', eEscuro);
-});
-
-// 3. Funções Práticas
+// Functions --------------------------------------------------
 function adicionarTarefa() {
   const texto = inputTarefa.value.trim();
 
   if (texto === '') {
     erroMsg.textContent = 'Por favor, digite uma descrição para a tarefa.';
+    erroMsg.style.display = 'block';
     return;
   }
 
   erroMsg.textContent = '';
+  erroMsg.style.display = 'none';
 
   const novaTarefa = {
     id: Date.now(),
@@ -79,12 +69,13 @@ function renderizarTarefas() {
   listaTarefas.innerHTML = '';
 
   if (tarefas.length === 0) {
-    listaTarefas.innerHTML = '<li><small>Nenhuma tarefa cadastrada.</small></li>';
+    listaTarefas.innerHTML = '<li><small class="no-task">Nenhuma tarefa cadastrada.</small></li>';
     return;
   }
 
   tarefas.forEach((t) => {
     const li = document.createElement('li');
+    li.className = 'list-row flex-row items-center justify-between';
     if (t.concluida) li.classList.add('concluida');
 
     const span = document.createElement('span');
@@ -93,7 +84,7 @@ function renderizarTarefas() {
 
     const btnExcluir = document.createElement('button');
     btnExcluir.textContent = 'Excluir';
-    btnExcluir.className = 'btn-remove';
+    btnExcluir.className = 'button default sm btn-danger';
     btnExcluir.addEventListener('click', () => removerTarefa(t.id));
 
     li.appendChild(span);
@@ -102,9 +93,27 @@ function renderizarTarefas() {
   });
 }
 
-function carregarTema() {
-  const eEscuro = JSON.parse(localStorage.getItem('tema_escuro'));
-  if (eEscuro) {
-    document.body.classList.add('dark-mode');
+// 1. Inicialização --------------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+  carregarTema();
+  renderizarTarefas();
+});
+
+// 2. Escutadores de Eventos --------------------------------------------------
+formTarefa.addEventListener('submit', (e) => {
+  e.preventDefault(); // Impede o recarregamento da página
+  adicionarTarefa();
+});
+
+btnLimpar.addEventListener('click', () => {
+  if (confirm('Tem certeza que deseja apagar todas as tarefas?')) {
+    tarefas = [];
+    salvarERenderizar();
   }
-}
+});
+
+themeButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-theme');
+  const isDark = document.body.classList.contains('dark-theme');
+  LocalStorage.set('dark_theme', isDark);
+});

@@ -7,14 +7,7 @@
 
     <title>Nadia | Portal - Dev Web</title>
 
-    <link rel="stylesheet" href="styles/main.css" />
-
-    <script src="utils/storage.js"></script>
-    <script src="./components/organisms/header-nav/header-nav.js"></script>
-    <script src="./components/organisms/frog-head/frog-head.js"></script>
-    <script src="./components/organisms/footer/footer.js"></script>
-    <script src="./components/molecules/callout/callout.js"></script>
-    <script src="./components/molecules/card/card.js"></script>
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
 
   <body>
@@ -38,73 +31,66 @@
 
     <footer id="footer"></footer>
 
-    <script>
-      function renderAll() {
-        document.querySelector('#header-nav').innerHTML = HeaderNav();
-        HeaderNavPillAnimation();
+    <script src="./utils/render-base-layout.js" type="module"></script>
+    <script type="module">
+      import { Callout } from './components/molecules/callout/callout.js';
+      import { Card } from './components/molecules/card/card.js';
 
-        document.querySelector('#frog-head').innerHTML = FrogHead();
-        document.querySelector('#footer').innerHTML = Footer();
+      document.querySelector('#callout').innerHTML = Callout({
+        title: 'Portal Prático da Turma de Desenvolvimento Web',
+        description: `
+          Este projeto foi projetado para elevar o nível estético e estrutural 
+          das nossas páginas web. Explore as seções do portal para verificar a evolução
+          do uso de CSS, layouts responsivos e novos elementos interativos.
+        `,
+        color: 'var(--color-primary-400)',
+      });
 
-        document.querySelector('#callout').innerHTML = Callout({
-          title: 'Portal Prático da Turma de Desenvolvimento Web',
-          description: `
-            Este projeto foi projetado para elevar o nível estético e estrutural 
-            das nossas páginas web. Explore as seções do portal para verificar a evolução
-            do uso de CSS, layouts responsivos e novos elementos interativos.
+      document.querySelector('#card1').innerHTML = Card({
+        title: 'Mini Corrida',
+        subtitle: 'Roteiro 0',
+        description: 'Mini jogo de corrida demonstrando o uso de HTML e CSS3.',
+        buttonLabel: 'Ver Corrida &rarr;',
+        cardUrl: 'roteiro-0.html',
+      });
+
+      document.querySelector('#card2').innerHTML = Card({
+        title: ' Mini Currículo',
+        subtitle: 'Roteiros 1 e 2',
+        description:
+          'Estrutura básica de tags HTML, uso do Bloco de Notas e publicação estática via Netlify.',
+        buttonLabel: 'Ver Currículo &rarr;',
+        cardUrl: 'curriculo.html',
+      });
+
+      document.querySelector('#card3').innerHTML = Card({
+        title: 'Exemplos de Design & CSS',
+        subtitle: 'Roteiro 3',
+        description:
+          'Estilização com CSS3, conceitos de box model, cores modernas, tipografia e novos componentes visualmente atraentes.',
+        buttonLabel: 'Ver Exemplos &rarr;',
+        cardUrl: 'roteiro-3.html',
+      });
+
+      document.querySelector('#card4').innerHTML = Card({
+        title: 'Exemplos de Lógica JS',
+        subtitle: 'Roteiro 4',
+        description:
+          'Uma página com exemplos práticos de lógica de programação em JavaScript, mostrando variáveis, entrada/saída, decisões, laços, arrays, funções, DOM e um mini-jogo.',
+        buttonLabel: 'Ver Exemplos &rarr;',
+        cardUrl: 'roteiro-4.html',
+      });
+
+      document.querySelector('#card5').innerHTML = Card({
+        title: 'JS Externo, Manipulação de DOM e LocalStorage',
+        subtitle: 'Roteiro 5',
+        description: `
+            Evoluir a lógica separando as camadas em arquivos externos manipulando o DOM 
+            por meio de 'addEventListener' e implementando persistência de dados no navegador utilizando 'localStorage'.
           `,
-          color: 'var(--color-primary-400)',
-        });
-
-        document.querySelector('#card1').innerHTML = Card({
-          title: 'Mini Corrida',
-          subtitle: 'Roteiro 0',
-          description: 'Mini jogo de corrida demonstrando o uso de HTML e CSS3.',
-          buttonLabel: 'Ver Corrida &rarr;',
-          cardUrl: 'roteiro-0.html',
-        });
-
-        document.querySelector('#card2').innerHTML = Card({
-          title: ' Mini Currículo',
-          subtitle: 'Roteiros 1 e 2',
-          description:
-            'Estrutura básica de tags HTML, uso do Bloco de Notas e publicação estática via Netlify.',
-          buttonLabel: 'Ver Currículo &rarr;',
-          cardUrl: 'curriculo.html',
-        });
-
-        document.querySelector('#card3').innerHTML = Card({
-          title: 'Exemplos de Design & CSS',
-          subtitle: 'Roteiro 3',
-          description:
-            'Estilização com CSS3, conceitos de box model, cores modernas, tipografia e novos componentes visualmente atraentes.',
-          buttonLabel: 'Ver Exemplos &rarr;',
-          cardUrl: 'roteiro-3.html',
-        });
-
-        document.querySelector('#card4').innerHTML = Card({
-          title: 'Exemplos de Lógica JS',
-          subtitle: 'Roteiro 4',
-          description:
-            'Uma página com exemplos práticos de lógica de programação em JavaScript, mostrando variáveis, entrada/saída, decisões, laços, arrays, funções, DOM e um mini-jogo.',
-          buttonLabel: 'Ver Exemplos &rarr;',
-          cardUrl: 'roteiro-4.html',
-        });
-
-        document.querySelector('#card5').innerHTML = Card({
-          title: 'JS Externo, Manipulação de DOM e LocalStorage',
-          subtitle: 'Roteiro 5',
-          description: `
-            Evoluir a lógica de programação para o padrão de mercado: 
-            separando as camadas em arquivos externos manipulando o DOM por meio de escutadores de eventos ('addEventListener')
-            e implementando persistência de dados no navegador utilizando 'localStorage'.
-          `,
-          buttonLabel: 'Ver Exemplos &rarr;',
-          cardUrl: 'roteiro-5.html',
-        });
-      }
-
-      renderAll();
+        buttonLabel: 'Ver Exemplos &rarr;',
+        cardUrl: 'roteiro-5.html',
+      });
     </script>
   </body>
 </html>

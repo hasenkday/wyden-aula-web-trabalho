@@ -1,4 +1,4 @@
-function FrogHead() {
+export function FrogHead() {
   return `
     <div class="head"></div>
     <div class="eyes">

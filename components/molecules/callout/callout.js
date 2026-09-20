@@ -1,4 +1,4 @@
-function Callout({
+export function Callout({
   title = 'Callout title',
   description = 'Write some text here',
   color = 'var(--color-primary-400)',

@@ -1,0 +1,45 @@
+.output {
+  background: #f7f7f9;
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+  border-radius: 8px;
+  min-height: 26px;
+  white-space: pre-wrap;
+  flex: 1;
+}
+
+.roteiro-4 h3 {
+  text-align: center;
+}
+
+.roteiro-4 h4 {
+  font-weight: var(--font-weight-semibold);
+}
+
+.roteiro-4 .flex-row {
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.roteiro-4 input[type='number'],
+.roteiro-4 input[type='text'] {
+  max-width: 100%;
+  min-width: 120px;
+  flex: 1;
+}
+
+.roteiro-4 .section-card {
+  opacity: 50%;
+  transition: all 200ms ease-out;
+  filter: grayscale(1);
+}
+
+.roteiro-4 .section-card:hover {
+  opacity: 100%;
+  background: #fff;
+  filter: grayscale(0);
+}
+
+.roteiro-4 .button {
+  justify-content: center;
+}

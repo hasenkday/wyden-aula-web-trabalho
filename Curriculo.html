@@ -7,14 +7,7 @@
 
     <title>Nadia | Portal - Dev Web</title>
 
-    <link rel="stylesheet" href="styles/main.css" />
-
-    <script src="utils/storage.js"></script>
-    <script src="./components/organisms/header-nav/header-nav.js"></script>
-    <script src="./components/organisms/frog-head/frog-head.js"></script>
-    <script src="./components/organisms/dot-timeline/dot-timeline.js"></script>
-    <script src="./components/atoms/badge/badge.js"></script>
-    <script src="./components/organisms/footer/footer.js"></script>
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
 
   <body>
@@ -286,73 +279,61 @@
       }
     </style>
 
-    <script>
-      function renderAll() {
-        document.querySelector('#header-nav').innerHTML = HeaderNav();
-        HeaderNavPillAnimation();
+    <script src="./utils/render-base-layout.js" type="module"></script>
+    <script type="module">
+      import { DotTimeline } from './components/organisms/dot-timeline/dot-timeline.js';
+      import { renderBadgeList } from './components/atoms/badge/badge.js';
 
-        document.querySelector('#frog-head').innerHTML = FrogHead();
-        document.querySelector('#footer').innerHTML = Footer();
-
-        document.querySelector('#dot-timeline-1').innerHTML = DotTimeline({
-          index: 0,
-          isFirst: true,
-          isLast: false,
-          image: 'assets/inoa-logo.png',
-          metadataDate: 'Ago 2026 até o momento',
-          title: 'Desiner UX/UI & Front-end Dev',
-          description: `
+      document.querySelector('#dot-timeline-1').innerHTML = DotTimeline({
+        index: 0,
+        isFirst: true,
+        isLast: false,
+        image: 'assets/inoa-logo.png',
+        metadataDate: 'Ago 2026 até o momento',
+        title: 'Desiner UX/UI & Front-end Dev',
+        description: `
             <ul>
               <li>Design e desenvolvimento de melhorias UX/UI;</li>
               <li>Produtos B2B e B2C do ramo financeiro.</li>
             </ul>
           `,
-          metadataLocation: 'Estágio  •  Remoto, RJ',
-        });
+        metadataLocation: 'Estágio  •  Remoto, RJ',
+      });
 
-        document.querySelector('#dot-timeline-2').innerHTML = DotTimeline({
-          index: 1,
-          isFirst: false,
-          isLast: false,
-          image: './assets/tico-logo.png',
-          metadataDate: 'Nov 2024 - Ago 2026 (1 ano e 10 meses)',
-          title: 'Designer de Produto & Consultoria UX/UI',
-          description: `
+      document.querySelector('#dot-timeline-2').innerHTML = DotTimeline({
+        index: 1,
+        isFirst: false,
+        isLast: false,
+        image: './assets/tico-logo.png',
+        metadataDate: 'Nov 2024 - Ago 2026 (1 ano e 10 meses)',
+        title: 'Designer de Produto & Consultoria UX/UI',
+        description: `
             <ul>
               <li>Design de plataformas ERP interno, produtos B2B, B2C e B2B2C;</li>
               <li>Produtos web e mobile voltados para formaturas e eventos.</li>
             </ul>
           `,
-          metadataLocation: 'Contrato PJ • Remoto, Bauru-S',
-        });
+        metadataLocation: 'Contrato PJ • Remoto, Bauru-S',
+      });
 
-        document.querySelector('#dot-timeline-3').innerHTML = DotTimeline({
-          index: 2,
-          isFirst: false,
-          isLast: true,
-          image: './assets/kodus-logo.png',
-          metadataDate: 'Jan 2020 - Abr 2025 (5 anos e 4 meses)',
-          title: 'Designer UX/UI & Full-stack Dev',
-          description: `
+      document.querySelector('#dot-timeline-3').innerHTML = DotTimeline({
+        index: 2,
+        isFirst: false,
+        isLast: true,
+        image: './assets/kodus-logo.png',
+        metadataDate: 'Jan 2020 - Abr 2025 (5 anos e 4 meses)',
+        title: 'Designer UX/UI & Full-stack Dev',
+        description: `
             <ul>
               <li>Desenvolvimento de ERP interno;</li>
               <li>Design System de plataformas B2C e para ferramenta de revisão de código IA;</li>
               <li>Produtos voltados para o nicho de desenvolvimento.</li>
             </ul>
           `,
-          metadataLocation: 'Contrato PJ, Híbrido, Bauru-SP',
-        });
-      }
+        metadataLocation: 'Contrato PJ, Híbrido, Bauru-SP',
+      });
 
-      renderAll();
-
-      function renderBadges(targetId, items) {
-        const target = document.querySelector(`#${targetId}`);
-
-        target.innerHTML = items.map((item) => Badge({ label: item })).join('');
-      }
-
-      renderBadges('skills-ux', [
+      renderBadgeList('skills-ux', [
         'UX Design',
         'UI Design',
         'Pesquisa com Usuários',
@@ -364,7 +345,7 @@
         'Design Systems',
       ]);
 
-      renderBadges('skills-design', [
+      renderBadgeList('skills-design', [
         'Figma',
         'Adobe Photoshop',
         'Adobe After Effects',
@@ -372,7 +353,7 @@
         'Blender',
       ]);
 
-      renderBadges('skills-front-end', [
+      renderBadgeList('skills-front-end', [
         'JavaScript',
         'HTML5',
         'CSS',
@@ -383,7 +364,7 @@
         'Tailwind CSS',
       ]);
 
-      renderBadges('skills-back-end', ['Node.js', 'Express.js', 'MongoDB', 'SQL']);
+      renderBadgeList('skills-back-end', ['Node.js', 'Express.js', 'MongoDB', 'SQL']);
     </script>
   </body>
 </html>

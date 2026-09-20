@@ -1,4 +1,4 @@
-function Exemplo6() {
+export function Exemplo6() {
   return `
         <h3>Caixa com Sombra</h3>
         <div class="caixa">Sombrinha</div>
