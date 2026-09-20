@@ -1,8 +1,10 @@
 import { LocalStorage } from '../../utils/storage.js';
+import { updateTasksCounter } from './exercicios.js';
 
 const formTarefa = document.getElementById('tasks-form');
 const inputTarefa = document.getElementById('task-input');
 const listaTarefas = document.getElementById('tasks-list');
+const taskCounter = document.getElementById('tasks-counter');
 
 const erroMsg = document.getElementById('error-msg');
 const btnLimpar = document.getElementById('btn-limpar');
@@ -10,13 +12,13 @@ const btnLimpar = document.getElementById('btn-limpar');
 const themeButton = document.getElementById('theme-button');
 
 // Estado inicial da Aplicação
-let tarefas = JSON.parse(localStorage.getItem('tarefas_app')) || [];
+let tarefas = JSON.parse(LocalStorage.get('tasksList')) || [];
 
-const savedTheme = LocalStorage.get('dark_theme');
+const savedTheme = LocalStorage.get('darkTheme');
 document.body.classList.toggle('dark-theme', savedTheme == 'true');
 
 function carregarTema() {
-  const eEscuro = JSON.parse(localStorage.getItem('dark_theme'));
+  const eEscuro = JSON.parse(LocalStorage.get('darkTheme'));
   if (eEscuro) {
     document.body.classList.add('dark-theme');
   }
@@ -61,8 +63,9 @@ function removerTarefa(id) {
 }
 
 function salvarERenderizar() {
-  localStorage.setItem('tarefas_app', JSON.stringify(tarefas));
+  LocalStorage.set('tasksList', JSON.stringify(tarefas));
   renderizarTarefas();
+  updateTasksCounter(tarefas, taskCounter);
 }
 
 function renderizarTarefas() {
@@ -97,6 +100,7 @@ function renderizarTarefas() {
 document.addEventListener('DOMContentLoaded', () => {
   carregarTema();
   renderizarTarefas();
+  updateTasksCounter(tarefas, taskCounter);
 });
 
 // 2. Escutadores de Eventos --------------------------------------------------
@@ -115,5 +119,5 @@ btnLimpar.addEventListener('click', () => {
 themeButton.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
   const isDark = document.body.classList.contains('dark-theme');
-  LocalStorage.set('dark_theme', isDark);
+  LocalStorage.set('darkTheme', isDark);
 });

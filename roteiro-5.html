@@ -26,7 +26,7 @@
         </section>
 
         <section class="section-card">
-          <h3>1) Cadastrar Nova Tarefa</h3>
+          <h3>Cadastrar Nova Tarefa</h3>
           <form id="tasks-form" class="flex-row">
             <input id="task-input" type="text" placeholder="Digite uma nova tarefa..." required />
             <button type="submit" class="button default md">Adicionar</button>
@@ -36,7 +36,11 @@
 
         <section class="section-card">
           <div class="flex-row items-center justify-between">
-            <h3>2) Minhas Tarefas (Persistidas no LocalStorage)</h3>
+            <div class="flex-row items-center">
+              <h3>Minhas Tarefas</h3>
+              <span id="tasks-counter" class="taks-counter"></span>
+            </div>
+
             <button id="btn-limpar" class="button default md btn-danger">Limpar Todas</button>
           </div>
           <ul id="tasks-list" class="output"></ul>

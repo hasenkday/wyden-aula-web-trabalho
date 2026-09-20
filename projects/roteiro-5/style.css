@@ -75,6 +75,12 @@ body {
   padding: 12px 20px;
 }
 
+.taks-counter {
+  opacity: 50%;
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-medium);
+}
+
 .list-row {
   padding: 12px 12px 12px 20px;
   border-top: 1px solid #e5e5e5;
@@ -88,30 +94,3 @@ body {
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-medium);
 }
-
-/* .roteiro-5 ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 15px;
-} */
-
-/* .roteiro-5 li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid var(--border-color);
-} */
-
-/* .roteiro-5 li.concluida span {
-  text-decoration: line-through;
-  opacity: 0.6;
-} */
-
-/* .roteiro-5 .btn-remove {
-  background-color: transparent;
-  color: var(--danger);
-  border: 1px solid var(--danger);
-  padding: 4px 8px;
-  border-radius: 6px;
-} */
