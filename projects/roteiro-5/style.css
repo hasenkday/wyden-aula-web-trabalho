@@ -71,6 +71,9 @@ body {
 .output .no-task {
   color: var(--color-neutral-300);
 }
+.output:has(.no-task) {
+  padding: 12px 20px;
+}
 
 .list-row {
   padding: 12px 12px 12px 20px;
