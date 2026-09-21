@@ -70,6 +70,7 @@ body {
   padding: 0;
   overflow-y: auto;
   max-height: 520px;
+  min-height: 520px;
 }
 
 .output .no-task {
@@ -104,8 +105,10 @@ body {
 .list-row:first-child {
   border-top: none;
 }
-.list-row span {
+.list-row #colTask {
   width: 65%;
+}
+.list-row span {
   color: var(--color-text);
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-medium);
@@ -118,6 +121,28 @@ body {
 }
 .list-row.concluida {
   opacity: 40%;
+}
+
+.list-row .disabled {
+  filter: grayscale(1);
+  opacity: 80%;
+}
+.list-row .disabled.button:hover {
+  transform: none !important;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.list-row .disabled.button.default:active {
+  filter: grayscale(1);
+}
+
+.edit-container {
+  gap: 8px;
+  padding: 0 32px 0 0;
+}
+
+.edit-container input {
+  flex: 1;
 }
 
 .controls {
