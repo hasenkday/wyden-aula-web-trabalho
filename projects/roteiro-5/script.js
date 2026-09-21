@@ -1,11 +1,12 @@
 import { LocalStorage } from '../../utils/storage.js';
-import { updateTasksCounter, searchFilter, formatDate } from './exercicios.js';
+import { updateTasksCounter, searchFilter, formatDate, sortTasks } from './exercicios.js';
 
 const formTarefa = document.getElementById('tasks-form');
 const inputTarefa = document.getElementById('task-input');
 const listaTarefas = document.getElementById('tasks-list');
 const taskCounter = document.getElementById('tasks-counter');
 const taskFilter = document.getElementById('task-filter');
+const sortTasksSelect = document.getElementById('sort-tasks');
 
 const erroMsg = document.getElementById('error-msg');
 const btnLimpar = document.getElementById('btn-limpar');
@@ -65,6 +66,10 @@ function removerTarefa(id) {
 
 function salvarERenderizar() {
   LocalStorage.set('tasksList', JSON.stringify(tarefas));
+
+  const selectedOption = Number(sortTasksSelect.value);
+  sortBySelectedOption(selectedOption);
+
   renderizarTarefas(tarefas);
   updateTasksCounter(tarefas, taskCounter);
 }
@@ -84,9 +89,14 @@ function renderizarTarefas(list) {
     li.className = 'list-row flex-row items-center justify-between';
     if (item.concluida) li.classList.add('concluida');
 
+    const btnCheck = document.createElement('span');
+    if (item.concluida) btnCheck.innerHTML = '<i class="fa-solid fa-square-check"></i>';
+    else btnCheck.innerHTML = '<i class="fa-regular fa-square"></i>';
+    btnCheck.className = 'button default icon';
+    btnCheck.addEventListener('click', () => alternarStatus(item.id));
+
     const colTask = document.createElement('span');
     colTask.textContent = item.texto;
-    colTask.addEventListener('click', () => alternarStatus(item.id));
 
     const colCreationDate = document.createElement('span');
     colCreationDate.textContent = formatDate(item.id);
@@ -102,6 +112,7 @@ function renderizarTarefas(list) {
     btnExcluir.className = 'button default icon btn-danger';
     btnExcluir.addEventListener('click', () => removerTarefa(item.id));
 
+    li.appendChild(btnCheck);
     li.appendChild(colTask);
     li.appendChild(colCreationDate);
     li.appendChild(btnEditar);
@@ -110,11 +121,19 @@ function renderizarTarefas(list) {
   });
 }
 
+function sortBySelectedOption(selectedOption) {
+  const sortList = sortTasks(tarefas, selectedOption);
+  tarefas = sortList;
+}
 // 1. Inicialização --------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   carregarTema();
-  renderizarTarefas(tarefas);
   updateTasksCounter(tarefas, taskCounter);
+
+  const selectedOption = Number(sortTasksSelect.value);
+  sortBySelectedOption(selectedOption);
+
+  renderizarTarefas(tarefas);
 });
 
 // 2. Escutadores de Eventos --------------------------------------------------
@@ -137,8 +156,15 @@ themeButton.addEventListener('click', () => {
 });
 
 taskFilter.addEventListener('input', (e) => {
-  e.preventDefault();
   const text = e.target.value.toLowerCase();
   const filteredList = searchFilter(tarefas, text, listaTarefas);
   renderizarTarefas(filteredList);
+});
+
+sortTasksSelect.addEventListener('change', (e) => {
+  if (!e.target.value) return;
+
+  const selectedOption = Number(e.target.value);
+  sortBySelectedOption(selectedOption);
+  salvarERenderizar();
 });

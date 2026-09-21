@@ -48,7 +48,15 @@
 
             <div class="flex-row items-center controls">
               <input id="task-filter" type="text" placeholder="Filtrar tarefas..." />
-              <button id="select-sort" class="button default md">Ordenar por</button>
+              <!-- TODO: create select custom component instead of using native one -->
+              <select id="sort-tasks" name="sort-tasks">
+                <option value="1">A-Z</option>
+                <option value="2">Z-A</option>
+                <option value="3">Concluídas primeiro</option>
+                <option value="4" selected>Não concluídas primeiro</option>
+                <option value="5">Data mais recente</option>
+                <option value="6">Data mais antiga</option>
+              </select>
               <button id="btn-limpar" class="button default md btn-danger">Limpar todas</button>
             </div>
           </div>

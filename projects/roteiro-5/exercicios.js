@@ -50,12 +50,21 @@ export function searchFilter(list, typing, outputRender) {
 export function editTask() {}
 
 // 4. **Ordenação** --------------------------------------------------
-export function orderByAZ() {}
-export function orderByZA() {}
-export function orderByStatusUp() {}
-export function orderByStatusDown() {}
-export function orderByCreationUp() {}
-export function orderByCreationDown() {}
+export function sortTasks(list, selectedOption) {
+  const SORTERS_ENUM = {
+    1: (a, b) => a.texto.localeCompare(b.texto), // AZ
+    2: (a, b) => b.texto.localeCompare(a.texto), // ZA
+    3: (a, b) => b.concluida - a.concluida, // Completed Up
+    4: (a, b) => a.concluida - b.concluida, // Completed Down
+    5: (a, b) => b.id - a.id, // Creation Up
+    6: (a, b) => a.id - b.id, // Creation Down
+  };
+
+  const chosenSortFunction = SORTERS_ENUM[selectedOption];
+
+  if (!chosenSortFunction) return list;
+  return [...list.sort(chosenSortFunction)];
+}
 
 // 5. **Data de Criação** --------------------------------------------------
 export function formatDate(date) {

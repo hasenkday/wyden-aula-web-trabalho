@@ -120,6 +120,10 @@ body {
   width: 250px;
 }
 
+.tasks-header .controls select {
+  width: 210px;
+}
+
 @media screen and (max-width: 756px) {
   .tasks-header {
     flex-direction: column;
