@@ -1,9 +1,9 @@
 import { LocalStorage } from '../../utils/storage.js';
-import { updateTasksCounter, searchFilter, formatDate, sortTasks } from './exercicios.js';
+import { updateTasksCounter, searchFilter, formatDate, sortTasks, editTask } from './exercicios.js';
 
 const formTarefa = document.getElementById('tasks-form');
 const inputTarefa = document.getElementById('task-input');
-const listaTarefas = document.getElementById('tasks-list');
+const renderedTasksList = document.getElementById('tasks-list');
 const taskCounter = document.getElementById('tasks-counter');
 const taskFilter = document.getElementById('task-filter');
 const sortTasksSelect = document.getElementById('sort-tasks');
@@ -77,37 +77,45 @@ function salvarERenderizar() {
 function renderizarTarefas(list) {
   if (!list) return;
 
-  listaTarefas.innerHTML = '';
+  renderedTasksList.innerHTML = '';
 
   if (list.length === 0) {
-    listaTarefas.innerHTML = '<li><small class="no-task">Nenhuma tarefa cadastrada.</small></li>';
+    renderedTasksList.innerHTML =
+      '<li><small class="no-task">Nenhuma tarefa cadastrada.</small></li>';
     return;
   }
 
   list.forEach((item) => {
     const li = document.createElement('li');
     li.className = 'list-row flex-row items-center justify-between';
+    li.id = `taskRow-${item.id}`;
     if (item.concluida) li.classList.add('concluida');
 
-    const btnCheck = document.createElement('span');
+    const btnCheck = document.createElement('button');
+    btnCheck.id = 'btnCheck';
     if (item.concluida) btnCheck.innerHTML = '<i class="fa-solid fa-square-check"></i>';
     else btnCheck.innerHTML = '<i class="fa-regular fa-square"></i>';
     btnCheck.className = 'button default icon';
     btnCheck.addEventListener('click', () => alternarStatus(item.id));
 
-    const colTask = document.createElement('span');
-    colTask.textContent = item.texto;
+    const colTask = document.createElement('div');
+    colTask.id = 'colTask';
+    colTask.innerHTML = `<span>${item.texto}</span>`;
 
     const colCreationDate = document.createElement('span');
     colCreationDate.textContent = formatDate(item.id);
     colCreationDate.className = 'col-date';
 
     const btnEditar = document.createElement('button');
+    btnEditar.id = 'btnEditar';
     btnEditar.innerHTML = '<i class="fa-solid fa-pencil"></i>';
     btnEditar.className = 'button default icon';
-    btnEditar.addEventListener('click', () => console.log('editar'));
+    btnEditar.addEventListener('click', () =>
+      editTask(item.id, renderedTasksList, tarefas, renderizarTarefas, salvarERenderizar),
+    );
 
     const btnExcluir = document.createElement('button');
+    btnExcluir.id = 'btnExcluir';
     btnExcluir.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
     btnExcluir.className = 'button default icon btn-danger';
     btnExcluir.addEventListener('click', () => removerTarefa(item.id));
@@ -117,7 +125,7 @@ function renderizarTarefas(list) {
     li.appendChild(colCreationDate);
     li.appendChild(btnEditar);
     li.appendChild(btnExcluir);
-    listaTarefas.appendChild(li);
+    renderedTasksList.appendChild(li);
   });
 }
 
@@ -157,7 +165,7 @@ themeButton.addEventListener('click', () => {
 
 taskFilter.addEventListener('input', (e) => {
   const text = e.target.value.toLowerCase();
-  const filteredList = searchFilter(tarefas, text, listaTarefas);
+  const filteredList = searchFilter(tarefas, text, renderedTasksList);
   renderizarTarefas(filteredList);
 });
 

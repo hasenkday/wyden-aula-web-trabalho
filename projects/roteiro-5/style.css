@@ -70,6 +70,7 @@ body {
   padding: 0;
   overflow-y: auto;
   max-height: 520px;
+  min-height: 520px;
 }
 
 .output .no-task {
@@ -79,10 +80,22 @@ body {
   padding: 12px 20px;
 }
 
-.taks-counter {
-  opacity: 50%;
-  font-size: var(--font-size-h4);
+.tasks-counter .tag-completed,
+.tasks-counter .tag-pending {
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-body);
   font-weight: var(--font-weight-medium);
+}
+.tasks-counter .tag-completed {
+  opacity: 70%;
+  background-color: var(--color-success-100);
+  color: var(--color-success-500);
+}
+.tasks-counter .tag-pending {
+  opacity: 50%;
+  background-color: var(--color-danger-100);
+  color: var(--color-danger-500);
 }
 
 .list-row {
@@ -92,46 +105,62 @@ body {
 .list-row:first-child {
   border-top: none;
 }
-.list-row span {
+.list-row #colTask {
   width: 65%;
+}
+.list-row span {
   color: var(--color-text);
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-medium);
 }
-
 .list-row .col-date {
   width: 15%;
   color: var(--color-text-muted);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-regular);
 }
-
-.tasks-header {
-  gap: 64px;
+.list-row.concluida {
+  opacity: 40%;
 }
 
-.tasks-header .controls {
+.list-row .disabled {
+  filter: grayscale(1);
+  opacity: 80%;
+}
+.list-row .disabled.button:hover {
+  transform: none !important;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.list-row .disabled.button.default:active {
+  filter: grayscale(1);
+}
+
+.edit-container {
+  gap: 8px;
+  padding: 0 32px 0 0;
+}
+
+.edit-container input {
+  flex: 1;
+}
+
+.controls {
   flex: 1;
   width: 100%;
   justify-content: end;
 }
 
-.tasks-header .controls input {
+.controls input {
+  flex: 1;
+}
+
+.controls select {
   width: 250px;
 }
 
-.tasks-header .controls select {
-  width: 210px;
-}
-
-@media screen and (max-width: 756px) {
-  .tasks-header {
-    flex-direction: column;
-    gap: 12px;
-    align-items: start;
-  }
-
-  .tasks-header .controls input {
+@media screen and (max-width: 1080px) {
+  .controls input {
     width: 100%;
   }
 }

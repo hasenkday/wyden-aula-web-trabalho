@@ -15,15 +15,30 @@
 // ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // 1. **Contador de Tarefas** --------------------------------------------------
+function isPlural(itemCount) {
+  return itemCount > 1 ? 's' : '';
+}
+
 export function updateTasksCounter(tasks, element) {
   const count = tasks.length;
 
   if (count === null || count === undefined) return;
 
+  const countCompleted = tasks.filter((item) => item.concluida).length;
+  const countPending = tasks.filter((item) => !item.concluida).length;
+
+  const completedTags = `<span class="tag-completed">${countCompleted} concluída${isPlural(countCompleted)}</span>`;
+  const pendingTags = `<span class="tag-pending">${countPending} pendente${isPlural(countPending)}</span>`;
+
   if (count > 0) {
-    element.textContent = `(${count})`;
+    element.innerHTML = `
+      <div class="flex-row tasks-counter">
+        ${countCompleted > 0 ? completedTags : ''} 
+        ${countPending > 0 ? pendingTags : ''}
+      </div>
+    `;
   } else {
-    element.textContent = '';
+    element.innerHTML = '';
   }
 }
 
@@ -47,7 +62,73 @@ export function searchFilter(list, typing, outputRender) {
 }
 
 // 3. **Edição de Tarefas** --------------------------------------------------
-export function editTask() {}
+export function editTask(taskID, renderedList, tasksList, renderFunction, saveAndRenderFunction) {
+  const targetRow = document.getElementById(`taskRow-${taskID}`);
+  if (!targetRow) return;
+
+  // disable all buttons
+  const buttons = renderedList.querySelectorAll('button, .button');
+  buttons.forEach((button) => {
+    button.disabled = true;
+    button.classList.add('disabled');
+  });
+
+  // get target task
+  const targetTask = tasksList.find((item) => item.id === taskID);
+  if (!targetTask) return;
+
+  const colTask = targetRow.querySelector('#colTask');
+  if (!colTask) return;
+
+  // START - create input with editing buttons
+  const input = document.createElement('input');
+  input.type = 'text';
+  input.value = targetTask.texto;
+  input.className = 'edit-task-input';
+
+  const btnSave = document.createElement('button');
+  btnSave.type = 'button';
+  btnSave.className = 'button default icon';
+  btnSave.innerHTML = '<i class="fa-solid fa-floppy-disk"></i>';
+
+  const btnCancel = document.createElement('button');
+  btnCancel.type = 'button';
+  btnCancel.className = 'button default icon';
+  btnCancel.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+
+  const editContainer = document.createElement('div');
+  editContainer.className = 'edit-container flex-row items-center';
+  editContainer.appendChild(input);
+  editContainer.appendChild(btnSave);
+  editContainer.appendChild(btnCancel);
+
+  colTask.innerHTML = '';
+  colTask.appendChild(editContainer);
+  input.focus();
+  input.select();
+
+  btnSave.disabled = false;
+  btnCancel.disabled = false;
+  // END - create input with editing buttons
+
+  // Add event to save the edited text
+  btnSave.addEventListener('click', () => {
+    const newText = input.value.trim();
+
+    if (newText === '') {
+      input.focus();
+      return;
+    }
+
+    targetTask.texto = newText;
+    saveAndRenderFunction();
+  });
+
+  // Add event to cancel the action
+  btnCancel.addEventListener('click', () => {
+    renderFunction(tasksList);
+  });
+}
 
 // 4. **Ordenação** --------------------------------------------------
 export function sortTasks(list, selectedOption) {
