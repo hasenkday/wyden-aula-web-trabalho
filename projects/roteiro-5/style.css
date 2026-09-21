@@ -79,10 +79,22 @@ body {
   padding: 12px 20px;
 }
 
-.taks-counter {
-  opacity: 50%;
-  font-size: var(--font-size-h4);
+.tasks-counter .tag-completed,
+.tasks-counter .tag-pending {
+  padding: 2px 10px;
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-body);
   font-weight: var(--font-weight-medium);
+}
+.tasks-counter .tag-completed {
+  opacity: 70%;
+  background-color: var(--color-success-100);
+  color: var(--color-success-500);
+}
+.tasks-counter .tag-pending {
+  opacity: 50%;
+  background-color: var(--color-danger-100);
+  color: var(--color-danger-500);
 }
 
 .list-row {
@@ -98,40 +110,32 @@ body {
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-medium);
 }
-
 .list-row .col-date {
   width: 15%;
   color: var(--color-text-muted);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-regular);
 }
-
-.tasks-header {
-  gap: 64px;
+.list-row.concluida {
+  opacity: 40%;
 }
 
-.tasks-header .controls {
+.controls {
   flex: 1;
   width: 100%;
   justify-content: end;
 }
 
-.tasks-header .controls input {
+.controls input {
+  flex: 1;
+}
+
+.controls select {
   width: 250px;
 }
 
-.tasks-header .controls select {
-  width: 210px;
-}
-
 @media screen and (max-width: 1080px) {
-  .tasks-header {
-    flex-direction: column;
-    gap: 12px;
-    align-items: start;
-  }
-
-  .tasks-header .controls input {
+  .controls input {
     width: 100%;
   }
 }

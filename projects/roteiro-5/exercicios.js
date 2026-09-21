@@ -15,16 +15,30 @@
 // ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // 1. **Contador de Tarefas** --------------------------------------------------
+function isPlural(itemCount) {
+  return itemCount > 1 ? 's' : '';
+}
+
 export function updateTasksCounter(tasks, element) {
   const count = tasks.length;
-  const countCompleted = tasks.filter((item) => item.concluida).length;
 
   if (count === null || count === undefined) return;
 
+  const countCompleted = tasks.filter((item) => item.concluida).length;
+  const countPending = tasks.filter((item) => !item.concluida).length;
+
+  const completedTags = `<span class="tag-completed">${countCompleted} concluída${isPlural(countCompleted)}</span>`;
+  const pendingTags = `<span class="tag-pending">${countPending} pendente${isPlural(countPending)}</span>`;
+
   if (count > 0) {
-    element.textContent = `(${countCompleted}/${count} concluídas)`;
+    element.innerHTML = `
+      <div class="flex-row tasks-counter">
+        ${countCompleted > 0 ? completedTags : ''} 
+        ${countPending > 0 ? pendingTags : ''}
+      </div>
+    `;
   } else {
-    element.textContent = '';
+    element.innerHTML = '';
   }
 }
 
