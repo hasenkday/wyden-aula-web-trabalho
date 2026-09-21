@@ -58,4 +58,15 @@ export function orderByCreationUp() {}
 export function orderByCreationDown() {}
 
 // 5. **Data de Criação** --------------------------------------------------
-export function formatDate() {}
+export function formatDate(date) {
+  return Intl.DateTimeFormat('en-GB', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  })
+    .format(date)
+    .replace(',', '');
+}

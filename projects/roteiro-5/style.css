@@ -93,10 +93,17 @@ body {
   border-top: none;
 }
 .list-row span {
-  width: 100%;
+  width: 65%;
   color: var(--color-text);
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-medium);
+}
+
+.list-row .col-date {
+  width: 15%;
+  color: var(--color-text-muted);
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-regular);
 }
 
 .tasks-header {

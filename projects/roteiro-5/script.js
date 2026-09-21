@@ -1,5 +1,5 @@
 import { LocalStorage } from '../../utils/storage.js';
-import { updateTasksCounter, searchFilter } from './exercicios.js';
+import { updateTasksCounter, searchFilter, formatDate } from './exercicios.js';
 
 const formTarefa = document.getElementById('tasks-form');
 const inputTarefa = document.getElementById('task-input');
@@ -79,14 +79,18 @@ function renderizarTarefas(list) {
     return;
   }
 
-  list.forEach((t) => {
+  list.forEach((item) => {
     const li = document.createElement('li');
     li.className = 'list-row flex-row items-center justify-between';
-    if (t.concluida) li.classList.add('concluida');
+    if (item.concluida) li.classList.add('concluida');
 
-    const span = document.createElement('span');
-    span.textContent = t.texto;
-    span.addEventListener('click', () => alternarStatus(t.id));
+    const colTask = document.createElement('span');
+    colTask.textContent = item.texto;
+    colTask.addEventListener('click', () => alternarStatus(item.id));
+
+    const colCreationDate = document.createElement('span');
+    colCreationDate.textContent = formatDate(item.id);
+    colCreationDate.className = 'col-date';
 
     const btnEditar = document.createElement('button');
     btnEditar.innerHTML = '<i class="fa-solid fa-pencil"></i>';
@@ -96,9 +100,10 @@ function renderizarTarefas(list) {
     const btnExcluir = document.createElement('button');
     btnExcluir.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
     btnExcluir.className = 'button default icon btn-danger';
-    btnExcluir.addEventListener('click', () => removerTarefa(t.id));
+    btnExcluir.addEventListener('click', () => removerTarefa(item.id));
 
-    li.appendChild(span);
+    li.appendChild(colTask);
+    li.appendChild(colCreationDate);
     li.appendChild(btnEditar);
     li.appendChild(btnExcluir);
     listaTarefas.appendChild(li);
