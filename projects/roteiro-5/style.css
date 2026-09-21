@@ -124,7 +124,7 @@ body {
   width: 210px;
 }
 
-@media screen and (max-width: 756px) {
+@media screen and (max-width: 1080px) {
   .tasks-header {
     flex-direction: column;
     gap: 12px;

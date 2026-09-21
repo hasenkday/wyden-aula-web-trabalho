@@ -17,11 +17,12 @@
 // 1. **Contador de Tarefas** --------------------------------------------------
 export function updateTasksCounter(tasks, element) {
   const count = tasks.length;
+  const countCompleted = tasks.filter((item) => item.concluida).length;
 
   if (count === null || count === undefined) return;
 
   if (count > 0) {
-    element.textContent = `(${count})`;
+    element.textContent = `(${countCompleted}/${count} concluídas)`;
   } else {
     element.textContent = '';
   }
