@@ -28,7 +28,23 @@ export function updateTasksCounter(tasks, element) {
 }
 
 // 2. **Filtro de Busca** --------------------------------------------------
-export function searchFilter() {}
+export function searchFilter(list, typing, outputRender) {
+  if (!list && list?.length === 0) return;
+
+  if (typing.length > 0) {
+    const filteredList = list.filter((item) => item.texto.includes(typing));
+    if (filteredList && filteredList.length > 0) {
+      return filteredList;
+    } else {
+      outputRender.innerHTML =
+        '<li><small class="no-task">Nenhum item encontrado pelo filtro.</small></li>';
+    }
+  }
+
+  if (typing.length === 0) {
+    return list;
+  }
+}
 
 // 3. **Edição de Tarefas** --------------------------------------------------
 export function editTask() {}

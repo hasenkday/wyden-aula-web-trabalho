@@ -1,10 +1,11 @@
 import { LocalStorage } from '../../utils/storage.js';
-import { updateTasksCounter } from './exercicios.js';
+import { updateTasksCounter, searchFilter } from './exercicios.js';
 
 const formTarefa = document.getElementById('tasks-form');
 const inputTarefa = document.getElementById('task-input');
 const listaTarefas = document.getElementById('tasks-list');
 const taskCounter = document.getElementById('tasks-counter');
+const taskFilter = document.getElementById('task-filter');
 
 const erroMsg = document.getElementById('error-msg');
 const btnLimpar = document.getElementById('btn-limpar');
@@ -64,19 +65,21 @@ function removerTarefa(id) {
 
 function salvarERenderizar() {
   LocalStorage.set('tasksList', JSON.stringify(tarefas));
-  renderizarTarefas();
+  renderizarTarefas(tarefas);
   updateTasksCounter(tarefas, taskCounter);
 }
 
-function renderizarTarefas() {
+function renderizarTarefas(list) {
+  if (!list) return;
+
   listaTarefas.innerHTML = '';
 
-  if (tarefas.length === 0) {
+  if (list.length === 0) {
     listaTarefas.innerHTML = '<li><small class="no-task">Nenhuma tarefa cadastrada.</small></li>';
     return;
   }
 
-  tarefas.forEach((t) => {
+  list.forEach((t) => {
     const li = document.createElement('li');
     li.className = 'list-row flex-row items-center justify-between';
     if (t.concluida) li.classList.add('concluida');
@@ -105,7 +108,7 @@ function renderizarTarefas() {
 // 1. Inicialização --------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
   carregarTema();
-  renderizarTarefas();
+  renderizarTarefas(tarefas);
   updateTasksCounter(tarefas, taskCounter);
 });
 
@@ -126,4 +129,11 @@ themeButton.addEventListener('click', () => {
   document.body.classList.toggle('dark-theme');
   const isDark = document.body.classList.contains('dark-theme');
   LocalStorage.set('darkTheme', isDark);
+});
+
+taskFilter.addEventListener('input', (e) => {
+  e.preventDefault();
+  const text = e.target.value.toLowerCase();
+  const filteredList = searchFilter(tarefas, text, listaTarefas);
+  renderizarTarefas(filteredList);
 });
