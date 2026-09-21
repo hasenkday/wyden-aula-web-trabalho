@@ -51,6 +51,10 @@ body {
   color: var(--color-danger-400);
 }
 
+.roteiro-5 .button {
+  min-width: max-content;
+}
+
 .btn-danger {
   background-color: var(--color-danger-100) !important;
 }
@@ -62,7 +66,7 @@ body {
   min-height: 26px;
   white-space: pre-wrap;
   list-style: none;
-  margin-top: -6px;
+  margin: -6px 0 0 0;
   padding: 0;
   overflow-y: auto;
   max-height: 520px;
@@ -93,4 +97,30 @@ body {
   color: var(--color-text);
   font-size: var(--font-size-h4);
   font-weight: var(--font-weight-medium);
+}
+
+.tasks-header {
+  gap: 64px;
+}
+
+.tasks-header .controls {
+  flex: 1;
+  width: 100%;
+  justify-content: end;
+}
+
+.tasks-header .controls input {
+  width: 250px;
+}
+
+@media screen and (max-width: 756px) {
+  .tasks-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: start;
+  }
+
+  .tasks-header .controls input {
+    width: 100%;
+  }
 }

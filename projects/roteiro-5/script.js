@@ -85,12 +85,18 @@ function renderizarTarefas() {
     span.textContent = t.texto;
     span.addEventListener('click', () => alternarStatus(t.id));
 
+    const btnEditar = document.createElement('button');
+    btnEditar.innerHTML = '<i class="fa-solid fa-pencil"></i>';
+    btnEditar.className = 'button default icon';
+    btnEditar.addEventListener('click', () => console.log('editar'));
+
     const btnExcluir = document.createElement('button');
-    btnExcluir.textContent = 'Excluir';
-    btnExcluir.className = 'button default sm btn-danger';
+    btnExcluir.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+    btnExcluir.className = 'button default icon btn-danger';
     btnExcluir.addEventListener('click', () => removerTarefa(t.id));
 
     li.appendChild(span);
+    li.appendChild(btnEditar);
     li.appendChild(btnExcluir);
     listaTarefas.appendChild(li);
   });

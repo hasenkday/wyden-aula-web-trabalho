@@ -11,8 +11,10 @@
 // * Utilize `JSON.stringify()` ao salvar dados estruturados (objetos/arrays) no `localStorage` e `JSON.parse()` ao recuperar.
 // * Prefira usar `addEventListener` em vez de eventos inline no HTML para garantir uma arquitetura limpa e legível.
 // * Trate sempre casos de listas vazias para entregar uma boa experiência ao usuário (UX).
-import { LocalStorage } from '../../utils/storage.js';
 
+// ------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// 1. **Contador de Tarefas** --------------------------------------------------
 export function updateTasksCounter(tasks, element) {
   const count = tasks.length;
 
@@ -24,3 +26,20 @@ export function updateTasksCounter(tasks, element) {
     element.textContent = '';
   }
 }
+
+// 2. **Filtro de Busca** --------------------------------------------------
+export function searchFilter() {}
+
+// 3. **Edição de Tarefas** --------------------------------------------------
+export function editTask() {}
+
+// 4. **Ordenação** --------------------------------------------------
+export function orderByAZ() {}
+export function orderByZA() {}
+export function orderByStatusUp() {}
+export function orderByStatusDown() {}
+export function orderByCreationUp() {}
+export function orderByCreationDown() {}
+
+// 5. **Data de Criação** --------------------------------------------------
+export function formatDate() {}
