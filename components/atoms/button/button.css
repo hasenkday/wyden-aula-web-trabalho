@@ -10,7 +10,7 @@
   font-weight: var(--font-weight-semibold);
   color: var(--color-primary-400);
   display: inline-flex;
-  gap: 20px;
+  gap: 8px;
   justify-content: space-between;
   width: max-content;
   align-items: center;
@@ -52,6 +52,15 @@
 .button.sm {
   padding: 4px 16px;
   min-height: 40px;
+}
+
+.button.icon {
+  padding: 4px 4px;
+  min-height: 40px;
+  min-width: 40px;
+  height: 40px;
+  width: 40px;
+  justify-content: center;
 }
 
 .button.default {
