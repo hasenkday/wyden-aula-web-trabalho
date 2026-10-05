@@ -149,3 +149,20 @@
 .py-lg {
   padding-block: var(--space-lg);
 }
+
+/* Typhography */
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.text-start {
+  text-align: start;
+}
+
+.text-end {
+  text-align: end;
+}

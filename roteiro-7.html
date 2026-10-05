@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>Nadia | Portal - Dev Web</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="./projects/roteiro-7/style.css" />
+  </head>
+
+  <body>
+    <header id="header-nav" class="header-nav"></header>
+    <div id="frog-head"></div>
+
+    <h2 class="content-headline">Roteiro 7 - Lógica de Programação com PHP</h2>
+    <div class="roteiro-7 content">
+      <div class="container flex-row">
+        <section class="flex-col buttons">
+          <button
+            onclick="switchExemple('./projects/roteiro-7/exemplos/exemplo1.php', this)"
+            class="button fill"
+          >
+            Ver exemplo 1 &emsp; &rarr;
+          </button>
+          <button
+            onclick="switchExemple('./projects/roteiro-7/exemplos/exemplo2.php', this)"
+            class="button fill"
+          >
+            Ver exemplo 2 &emsp; &rarr;
+          </button>
+          <button
+            onclick="switchExemple('./projects/roteiro-7/exemplos/exemplo3.php', this)"
+            class="button fill"
+          >
+            Ver exemplo 3 &emsp; &rarr;
+          </button>
+          <button
+            onclick="switchExemple('./projects/roteiro-7/exemplos/exemplo4.php', this)"
+            class="button fill"
+          >
+            Ver exemplo 4 &emsp; &rarr;
+          </button>
+          <button
+            onclick="switchExemple('./projects/roteiro-7/exemplos/exemplo5.php', this)"
+            class="button fill"
+          >
+            Ver exemplo 5 &emsp; &rarr;
+          </button>
+        </section>
+
+        <div id="playground" class="playground section-card">
+          <pre id="playground-example"></pre>
+          <div class="output">
+            <object
+              id="playground-output"
+              type="text/html"
+              data="./projects/roteiro-7/exemplos/exemplo1.php"
+              width="100%"
+              height="100%"
+            ></object>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="./utils/render-base-layout.js" type="module"></script>
+    <script src="./projects/roteiro-7/script.js"></script>
+  </body>
+</html>

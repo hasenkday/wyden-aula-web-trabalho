@@ -1,0 +1,19 @@
+.output {
+  background: #f7f7f9;
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+  border-radius: 8px;
+  min-height: 26px;
+  white-space: pre-wrap;
+  flex: 1;
+}
+
+.roteiro-7 .buttons {
+  width: 180px;
+  text-align: center;
+}
+
+.roteiro-7 .playground * {
+  flex: 1;
+  text-wrap: wrap;
+}

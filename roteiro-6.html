@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>Nadia | Portal - Dev Web</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="./projects/roteiro-6/style.css" />
+  </head>
+
+  <body>
+    <header id="header-nav" class="header-nav"></header>
+    <div id="frog-head"></div>
+
+    <h2 class="content-headline">Roteiro 6 - Jogo Interativo: Star Trek</h2>
+    <div class="roteiro-6 content">
+      <div class="container">
+        <section class="section-card">
+          <h3 class="text-center">Painel de Controle - USS Enterprise</h3>
+          <div id="space-container">
+            <!-- Estrelas de fundo -->
+            <div class="stars"></div>
+
+            <!-- USS Enterprise ASCII -->
+            <pre id="enterprise-ship">
+             ___________________          _-_
+             \==============_=_/ ____.---'---`---.___
+                         \_ \    \----._________.----/
+                           \ \   /  /    `-_-
+                       __,--`.`-'..'-_
+                      /____          ||
+                           `--.____,-'
+          </pre
+            >
+
+            <div class="instructions text-center">
+              Clique em qualquer lugar no espaço para disparar os lasers da Enterprise!
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <footer id="footer"></footer>
+
+    <script src="./utils/render-base-layout.js" type="module"></script>
+    <script src="./projects/roteiro-6/script.js" type="module"></script>
+  </body>
+</html>
