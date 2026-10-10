@@ -11,7 +11,7 @@ try {
     $method = $_SERVER['REQUEST_METHOD'];
     $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
-    if (preg_match('#^/roteiro-7/exemplos(?:/\d+)?$', $path)) {
+    if (preg_match('#^/roteiro-7/exemplos(?:/\d+)?$#', $path)) {
         $module = new ExemplosModule();
         $module->handle($path, $method);
         exit;
