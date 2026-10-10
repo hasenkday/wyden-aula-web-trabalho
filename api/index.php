@@ -4,14 +4,9 @@
 require_once __DIR__ . '/responses.php';
 require_once __DIR__ . '/middleware.php';
 require_once __DIR__ . '/roteiro-7/exemplos/exemplos.module.php';
-// require_once __DIR__ . '/roteiro-7/exercicios/exercicios.module.php';
-
-header('Access-Control-Allow-Methods: GET, POST, PUT, PATCH, DELETE, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type');
 
 CorsMiddleware::handle();
 
-// Trata CORS
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(204);
     exit;

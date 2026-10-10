@@ -6,10 +6,7 @@ class CorsMiddleware
     {
         $origins = 'http://localhost:5500,http://127.0.0.1:5500,https://wyden-nadiahase.netlify.app';
 
-        $allowedOrigins = array_map(
-            'trim',
-            explode(',', $origins)
-        );
+        $allowedOrigins = array_map('trim', explode(',', $origins));
 
         $origin = $_SERVER['HTTP_ORIGIN'] ?? '';
 
