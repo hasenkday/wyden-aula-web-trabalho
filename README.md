@@ -41,6 +41,8 @@ Todo o desenvolvimento dos roteiros de aula e exemplos práticos encontram-se aq
 
 ./start-web.sh
 ```
-_Necessário rodar os comandos no root dir_
+_Necessário rodar os comandos no root dir._
 
 _Não tem SSR, precisa recarregar a página para ver as mudanças aplicadas._
+
+_Dentro de config.js, comente a linha 3 e descomente a linha 2 para trabalhar a api localmente._
