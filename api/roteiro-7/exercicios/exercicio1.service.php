@@ -14,9 +14,9 @@ class Exercicio1Service
         $baseMsg = "Seu IMC é $imc (kg/m²) \n";
 
         if ($imc < 18.5 && $imc > 0){
-            return $baseMsg . 'Status: Abaixo do peso / Magreza	Baixo (riscos de desnutrição).';
+            return $baseMsg . 'Abaixo do peso / Magreza	Baixo (riscos de desnutrição).';
         } else if ($imc > 18.5 && $imc <= 24.9) {
-            return $baseMsg . 'Peso: Saudável / Normal.';    
+            return $baseMsg . 'Saudável / Normal.';    
         } else if ($imc > 25.0 && $imc <= 29.9) {
             return $baseMsg . 'Sobrepeso / Aumentado.';    
         } else if ($imc > 30.0 && $imc <= 34.9) {
@@ -35,7 +35,9 @@ class Exercicio1Service
         $peso = 49.7;
         $altura = 1.63;
         
-        $output = $this->CalcularIMC($peso, $altura);
+        $output = "Peso: $peso \n";
+        $output .= "Altura: $altura \n\n";
+        $output .= $this->CalcularIMC($peso, $altura);
 
         return [
             'source' => file_get_contents(__FILE__),
