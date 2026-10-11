@@ -10,7 +10,6 @@
 // * break: Interrompe e encerra o laço de repetição imediatamente.
 // * continue: Pula a iteração atual e avança para a próxima.
 
-
 class Exemplo3Service
 {
     public function executar(): array
