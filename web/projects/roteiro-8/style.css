@@ -21,16 +21,16 @@
   overflow-y: auto;
 }
 
-.roteiro-7 .buttons {
+.roteiro-8 .buttons {
   width: 180px;
   text-align: center;
 }
 
-.roteiro-7 .playground * {
+.roteiro-8 .playground * {
   text-wrap: wrap;
 }
 
-.roteiro-7 hr {
+.roteiro-8 hr {
   flex: 1;
   height: 1px;
   margin: 0;
