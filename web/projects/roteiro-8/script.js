@@ -6,6 +6,8 @@ async function switchExemple(url, button) {
     const response = await fetch(url);
     const result = await response.json();
 
+    example.textContent = error;
+
     if (!response.ok || result.error) {
       example.textContent = '';
       output.textContent = result.error?.message || 'Erro ao carregar conteúdo.';
@@ -23,7 +25,7 @@ async function switchExemple(url, button) {
       button.classList.add('active');
     }
   } catch (error) {
-    example.textContent = error
+    // example.textContent = error;
     output.textContent = 'Não foi possível conectar à API.';
     console.error(error);
   }
