@@ -23,7 +23,7 @@ async function switchExemple(url, button) {
       button.classList.add('active');
     }
   } catch (error) {
-    example.textContent = '';
+    example.textContent = error
     output.textContent = 'Não foi possível conectar à API.';
     console.error(error);
   }
