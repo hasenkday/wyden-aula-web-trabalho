@@ -11,16 +11,16 @@ class Exemplo1Service
         // Identificação do método HTTP da requisição
         $metodo = $_SERVER['REQUEST_METHOD'] ?? 'GET';
         
-        $output = "Método da requisição: $metodo\n";
+        $output = "Método da requisição: $metodo";
         
         // Captura de parâmetros via GET
         if (isset($_GET['busca'])) {
-            $output .= "Termo pesquisado via GET: " . $_GET['busca'] . "\n\n";
+            $output .= "Termo pesquisado via GET: " . $_GET['busca'] . "";
         }
         
         // Captura de parâmetros via POST
         if (isset($_POST['usuario'])) {
-            $output .= "Usuário recebido via POST: " . $_POST['usuario'] . "\n\n";
+            $output .= "Usuário recebido via POST: " . $_POST['usuario'] . "";
         }
 
         return [
