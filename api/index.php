@@ -7,6 +7,8 @@ CorsMiddleware::handle();
 require_once __DIR__ . '/responses.php';
 require_once __DIR__ . '/roteiro-7/exemplos/exemplos.module.php';
 require_once __DIR__ . '/roteiro-7/exercicios/exercicios.module.php';
+require_once __DIR__ . '/roteiro-8/exemplos/exemplos.module.php';
+require_once __DIR__ . '/roteiro-8/exercicios/exercicios.module.php';
 
 try {
     $method = $_SERVER['REQUEST_METHOD'];
@@ -19,6 +21,20 @@ try {
     }
     
     if (preg_match('#^/roteiro-7/exercicios(?:/\d+)?$#', $path)) {
+        $module = new ExerciciosModule();
+        $module->handle($path, $method);
+        exit;
+    }
+
+    // --------------------------------------------------------------
+
+    if (preg_match('#^/roteiro-8/exemplos(?:/\d+)?$#', $path)) {
+        $module = new ExemplosModule();
+        $module->handle($path, $method);
+        exit;
+    }
+    
+    if (preg_match('#^/roteiro-8/exercicios(?:/\d+)?$#', $path)) {
         $module = new ExerciciosModule();
         $module->handle($path, $method);
         exit;
