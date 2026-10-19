@@ -5,7 +5,7 @@ require_once __DIR__ . '/exercicio2.service.php';
 require_once __DIR__ . '/exercicio3.service.php';
 require_once __DIR__ . '/exercicio4.service.php';
 
-class ExerciciosController
+class Exercicios8Controller
 {
     public function executar(int $numero, string $method): void
     {
