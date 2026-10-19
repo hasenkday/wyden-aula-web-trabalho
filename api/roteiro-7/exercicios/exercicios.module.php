@@ -2,7 +2,7 @@
 
 require_once __DIR__ . '/exercicios.controller.php';
 
-class ExerciciosModule
+class Exercicios7Module
 {
     public function handle(string $path, string $method): void
     {
