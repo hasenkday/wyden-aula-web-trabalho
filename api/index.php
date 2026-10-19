@@ -24,9 +24,7 @@ try {
         $module = new Exercicios7Module();
         $module->handle($path, $method);
         exit;
-    }
-
-    // --------------------------------------------------------------
+    }s
 
     if (preg_match('#^/roteiro-8/exemplos(?:/\d+)?$#', $path)) {
         $module = new Exemplos8Module();
