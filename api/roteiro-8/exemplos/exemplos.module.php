@@ -6,7 +6,7 @@ class ExemplosModule
 {
     public function handle(string $path, string $method): void
     {
-        if (preg_match('#^/roteiro-7/exemplos/(\d+)$#', $path, $matches)) {
+        if (preg_match('#^/roteiro-8/exemplos/(\d+)$#', $path, $matches)) {
             $controller = new ExemplosController();
             $controller->executar((int) $matches[1], $method);
             return;
