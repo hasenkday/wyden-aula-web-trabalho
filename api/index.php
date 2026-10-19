@@ -15,13 +15,13 @@ try {
     $path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
     if (preg_match('#^/roteiro-7/exemplos(?:/\d+)?$#', $path)) {
-        $module = new ExemplosModule();
+        $module = new Exemplos7Module();
         $module->handle($path, $method);
         exit;
     }
     
     if (preg_match('#^/roteiro-7/exercicios(?:/\d+)?$#', $path)) {
-        $module = new ExerciciosModule();
+        $module = new Exercicios7Module();
         $module->handle($path, $method);
         exit;
     }
@@ -29,13 +29,13 @@ try {
     // --------------------------------------------------------------
 
     if (preg_match('#^/roteiro-8/exemplos(?:/\d+)?$#', $path)) {
-        $module = new ExemplosModule();
+        $module = new Exemplos8Module();
         $module->handle($path, $method);
         exit;
     }
     
     if (preg_match('#^/roteiro-8/exercicios(?:/\d+)?$#', $path)) {
-        $module = new ExerciciosModule();
+        $module = new Exercicios8Module();
         $module->handle($path, $method);
         exit;
     }
