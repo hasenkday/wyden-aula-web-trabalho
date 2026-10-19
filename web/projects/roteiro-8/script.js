@@ -15,7 +15,7 @@ async function switchExemple(url, button) {
     example.textContent = result.data.source;
     output.textContent = result.data.output;
 
-    document.querySelectorAll('.roteiro-7 button').forEach((btn) => {
+    document.querySelectorAll('.roteiro-8 button').forEach((btn) => {
       btn.classList.remove('active');
     });
 
@@ -30,6 +30,6 @@ async function switchExemple(url, button) {
 }
 
 switchExemple(
-  `${CONFIG.API_URL}/roteiro-7/exemplos/1`,
-  document.querySelector('.roteiro-7 button'),
+  `${CONFIG.API_URL}/roteiro-8/exemplos/1`,
+  document.querySelector('.roteiro-8 button'),
 );
