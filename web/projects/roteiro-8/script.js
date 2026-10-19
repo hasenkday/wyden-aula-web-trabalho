@@ -4,9 +4,9 @@ async function switchExemple(url, button) {
 
   try {
     const response = await fetch(url);
-    example.textContent = await response.json();
-
     const result = await response.json();
+    
+    example.textContent = result;
 
     if (!response.ok || result.error) {
       example.textContent = "";
