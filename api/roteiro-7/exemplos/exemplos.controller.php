@@ -6,7 +6,7 @@ require_once __DIR__ . '/exemplo3.service.php';
 require_once __DIR__ . '/exemplo4.service.php';
 require_once __DIR__ . '/exemplo5.service.php';
 
-class ExemplosController
+class Exemplos7Controller
 {
     public function executar(int $numero, string $method): void
     {
