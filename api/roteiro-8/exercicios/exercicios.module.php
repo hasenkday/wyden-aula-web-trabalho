@@ -6,7 +6,7 @@ class ExerciciosModule
 {
     public function handle(string $path, string $method): void
     {
-        if (preg_match('#^/roteiro-7/exercicios/(\d+)$#', $path, $matches)) {
+        if (preg_match('#^/roteiro-8/exercicios/(\d+)$#', $path, $matches)) {
             $controller = new ExerciciosController();
             $controller->executar((int) $matches[1], $method);
             return;
