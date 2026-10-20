@@ -6,6 +6,8 @@
 //   para separar e exibir quais números são PARES e quais 
 //   são ÍMPARES.
 
+namespace Roteiro7\Exercicios;
+
 class Exercicio3Service
 {
     public function executar(): array

@@ -1,8 +1,12 @@
 <?php
 
+namespace Roteiro8\Exercicios;
+
 require_once __DIR__ . '/exercicios.controller.php';
 
-class Exercicios8Module
+use ApiResponse;
+
+class ExerciciosModule
 {
     public function handle(string $path, string $method): void
     {
