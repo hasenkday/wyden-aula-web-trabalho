@@ -28,9 +28,6 @@ class ApiResponse
     {
         header('Content-Type: application/json; charset=utf-8');
 
-        echo json_encode(
-            $response,
-            JSON_UNESCAPED_UNICODE | JSON_INVALID_UTF8_SUBSTITUTE
-        );
+        echo json_encode($response, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     }
 }
