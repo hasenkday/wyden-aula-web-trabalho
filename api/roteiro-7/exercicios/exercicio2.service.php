@@ -5,6 +5,8 @@
 //   um número inteiro (exemplo: 5! = 5 * 4 * 3 * 2 * 1 = 120) 
 //   utilizando o laço de repetição while.
 
+namespace Roteiro7\Exercicios;
+
 class Exercicio2Service
 {
     function CalcularFatorial(int $numero) {

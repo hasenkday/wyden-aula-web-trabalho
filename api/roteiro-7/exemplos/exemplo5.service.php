@@ -6,6 +6,8 @@
 // Script consolidado combinando TODOS os comandos lógicos trabalhados no roteiro.
 // Prática Hands-On 5 (Código Completo):
 
+namespace Roteiro7\Exemplos;
+
 class Exemplo5Service
 {
     public function executar(): array

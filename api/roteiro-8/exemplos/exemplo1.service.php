@@ -1,5 +1,7 @@
 <?php
 
+namespace Roteiro8\Exemplos;
+
 class Exemplo1Service
 {
     public function executar(): array
@@ -11,16 +13,16 @@ class Exemplo1Service
         // Identificação do método HTTP da requisição
         $metodo = $_SERVER['REQUEST_METHOD'] ?? 'GET';
         
-        $output = "Método da requisição: $metodo";
+        $output = "Método da requisição: $metodo \n\n";
         
         // Captura de parâmetros via GET
         if (isset($_GET['busca'])) {
-            $output .= "Termo pesquisado via GET: " . $_GET['busca'] . "";
+            $output .= "Termo pesquisado via GET: " . $_GET['busca'] . "\n\n";
         }
         
         // Captura de parâmetros via POST
         if (isset($_POST['usuario'])) {
-            $output .= "Usuário recebido via POST: " . $_POST['usuario'] . "";
+            $output .= "Usuário recebido via POST: " . $_POST['usuario'] . "\n\n";
         }
 
         return [

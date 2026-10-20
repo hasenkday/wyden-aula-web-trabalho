@@ -7,8 +7,8 @@ async function switchExemple(url, button) {
     const result = await response.json();
 
     if (!response.ok || result.error) {
-      example.textContent = '';
-      output.textContent = result.error?.message || 'Erro ao carregar conteúdo.';
+      example.textContent = JSON.stringify(result.error ?? result, null, 2);
+      output.textContent = `Erro HTTP ${response.status}`;
       return;
     }
 
@@ -23,7 +23,7 @@ async function switchExemple(url, button) {
       button.classList.add('active');
     }
   } catch (error) {
-    example.textContent = '';
+    example.textContent = error;
     output.textContent = 'Não foi possível conectar à API.';
     console.error(error);
   }

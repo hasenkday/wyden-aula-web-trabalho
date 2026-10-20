@@ -1,8 +1,12 @@
 <?php
 
+namespace Roteiro8\Exemplos;
+
 require_once __DIR__ . '/exemplos.controller.php';
 
-class Exemplos8Module
+use ApiResponse;
+
+class ExemplosModule
 {
     public function handle(string $path, string $method): void
     {

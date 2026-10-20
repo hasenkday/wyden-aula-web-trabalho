@@ -7,6 +7,8 @@
 // * Parâmetros: Dados recebidos pela função para processamento.
 // * return: Envia a resposta processada de volta ao código chamador.
 
+namespace Roteiro7\Exemplos;
+
 class Exemplo4Service
 {
     public function executar(): array

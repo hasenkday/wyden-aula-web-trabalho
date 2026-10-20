@@ -1,17 +1,19 @@
 <?php
 
+namespace Roteiro7\Exemplos;
+
 require_once __DIR__ . '/exemplo1.service.php';
 require_once __DIR__ . '/exemplo2.service.php';
 require_once __DIR__ . '/exemplo3.service.php';
 require_once __DIR__ . '/exemplo4.service.php';
 require_once __DIR__ . '/exemplo5.service.php';
 
-class Exemplos7Controller
+class ExemplosController
 {
     public function executar(int $numero, string $method): void
     {
         if ($method !== 'GET') {
-            ApiResponse::error('Método não permitido.', 405);
+            \ApiResponse::error('Método não permitido.', 405);
             return;
         }
 
@@ -25,10 +27,10 @@ class Exemplos7Controller
         };
 
         if ($service === null) {
-            ApiResponse::error('Exemplo não encontrado.', 404);
+            \ApiResponse::error('Exemplo não encontrado.', 404);
             return;
         }
 
-        ApiResponse::success($service->executar());
+        \ApiResponse::success($service->executar());
     }
 }

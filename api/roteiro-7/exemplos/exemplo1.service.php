@@ -9,6 +9,8 @@
 // * Operadores Relacionais: == (igual), === (idêntico em valor e tipo), != (diferente), > (maior), < (menor), >= (maior ou igual), <= (menor ou igual).
 // * Operadores Lógicos: && ou AND (E), || ou OR (OU), ! (NÃO / Negação).
 
+namespace Roteiro7\Exemplos;
+
 class Exemplo1Service
 {
     public function executar(): array

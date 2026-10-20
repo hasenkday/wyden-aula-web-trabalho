@@ -6,6 +6,8 @@
 //   e retorne a classificação utilizando a estrutura if/elseif/else 
 //   (Abaixo do peso, Peso normal, Sobrepeso, Obesidade).
 
+namespace Roteiro7\Exercicios;
+
 class Exercicio1Service
 {
     function CalcularIMC(float $peso, float $altura) {

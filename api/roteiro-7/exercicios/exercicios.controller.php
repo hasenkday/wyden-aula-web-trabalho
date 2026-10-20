@@ -1,16 +1,18 @@
 <?php
 
+namespace Roteiro7\Exercicios;
+
 require_once __DIR__ . '/exercicio1.service.php';
 require_once __DIR__ . '/exercicio2.service.php';
 require_once __DIR__ . '/exercicio3.service.php';
 require_once __DIR__ . '/exercicio4.service.php';
 
-class Exercicios7Controller
+class ExerciciosController
 {
     public function executar(int $numero, string $method): void
     {
         if ($method !== 'GET') {
-            ApiResponse::error('Método não permitido.', 405);
+            \ApiResponse::error('Método não permitido.', 405);
             return;
         }
 
@@ -23,10 +25,10 @@ class Exercicios7Controller
         };
 
         if ($service === null) {
-            ApiResponse::error('Exercício não encontrado.', 404);
+            \ApiResponse::error('Exercício não encontrado.', 404);
             return;
         }
 
-        ApiResponse::success($service->executar());
+        \ApiResponse::success($service->executar());
     }
 }

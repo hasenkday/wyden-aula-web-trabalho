@@ -7,6 +7,8 @@
 // * Operador Ternário: Abreviação para tomadas de decisão simples (condicao ? verdadeiro : falso).
 // * switch / case / default: Estrutura para comparar uma mesma variável com múltiplos valores fixos.
 
+namespace Roteiro7\Exemplos;
+
 class Exemplo2Service
 {
     public function executar(): array

@@ -11,23 +11,22 @@ class ApiResponse
     }
 
     public static function error(
-        string $message,
+        string|array $message,
         int $status = 400
     ): void {
         http_response_code($status);
 
         self::send([
             'data' => null,
-            'error' => [
-                'message' => $message,
-            ],
+            'error' => is_array($message)
+                ? $message
+                : ['message' => $message],
         ]);
     }
 
     private static function send(array $response): void
     {
         header('Content-Type: application/json; charset=utf-8');
-
         echo json_encode($response, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     }
 }

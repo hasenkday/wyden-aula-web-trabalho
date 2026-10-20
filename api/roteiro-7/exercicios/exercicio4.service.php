@@ -8,6 +8,7 @@
 //   comando break. Caso atinja 3 tentativas sem 
 //   sucesso, exiba "Conta Bloqueada".
 
+namespace Roteiro7\Exercicios;
 
 class Exercicio4Service
 {
