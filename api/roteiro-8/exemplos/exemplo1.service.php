@@ -1,4 +1,10 @@
 <?php
+// ETAPA 1: VARIÁVEIS SUPERGLOBAIS E MÉTODOS DE REQUISIÇÃO (GET E POST)
+
+// * Variáveis Superglobais: Vetores nativos e pré-definidos do PHP acessíveis em qualquer escopo do código, como `$_GET`, `$_POST`, `$_SERVER` e `$_REQUEST`.
+// * Método GET: Envia parâmetros anexados à URL do navegador (query string). Indicado para buscas, filtros de pesquisa e navegação sem dados sensíveis.
+// * Método POST: Envia dados de forma oculta no corpo da requisição HTTP. Indicado para envio de dados sensíveis, cadastros, formulários extensos e logins.
+// * `$_SERVER['REQUEST_METHOD']`: Identifica qual método HTTP foi utilizado para acionar o script (ex: `"GET"` ou `"POST"`).
 
 namespace Roteiro8\Exemplos;
 
