@@ -6,11 +6,10 @@ class Exercicio2Service
 {
     public function executar(): array
     {
-        $output = 'Ainda não foi feito.';
-
         return [
-            'source' => file_get_contents(__FILE__),
-            'output' => $output,
+            'source' => file_get_contents(__DIR__ . '/exercicio2.php'),
+            'output' => '/roteiro-9/paginas/exercicio2',
+            'type' => 'iframe',
         ];
     }
 }

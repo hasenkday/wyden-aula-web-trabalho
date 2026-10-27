@@ -6,11 +6,10 @@ class Exemplo5Service
 {
     public function executar(): array
     {
-        $output = 'Ainda não foi feito.';
-
         return [
-            'source' => file_get_contents(__FILE__),
-            'output' => $output,
+            'source' => file_get_contents(__DIR__ . '/exemplo5.php'),
+            'output' => '/roteiro-9/paginas/exemplo5',
+            'type' => 'iframe',
         ];
     }
 }
