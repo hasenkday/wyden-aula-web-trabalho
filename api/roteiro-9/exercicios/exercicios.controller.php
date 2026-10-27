@@ -5,7 +5,6 @@ namespace Roteiro9\Exercicios;
 require_once __DIR__ . '/exercicio1.service.php';
 require_once __DIR__ . '/exercicio2.service.php';
 require_once __DIR__ . '/exercicio3.service.php';
-require_once __DIR__ . '/exercicio4.service.php';
 
 class ExerciciosController
 {
@@ -20,7 +19,6 @@ class ExerciciosController
             1 => new Exercicio1Service(),
             2 => new Exercicio2Service(),
             3 => new Exercicio3Service(),
-            4 => new Exercicio4Service(),
             default => null,
         };
 
