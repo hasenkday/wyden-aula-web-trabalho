@@ -13,31 +13,32 @@ Script consolidado mostrando a interação entre as requisições do usuário na
 </head>
 <body>
     <h2>Parâmetros pela URL (GET)</h2>
+   
     <?php
-    // Captura o valor de "nome" na URL (fallback para 'Visitante')
-    $nome = $_GET['nome'] ?? 'Visitante';
-    echo "<p>Olá, <strong>$nome</strong>!</p>";
+        $nome = $_GET['nome'] ?? 'Visitante';
+        echo '<p>Olá, <strong>' . htmlspecialchars($nome, ENT_QUOTES, 'UTF-8') . '</strong>!</p>';
     ?>
+
     <hr>
 
-    <h2>Calculadora de Formulário (POST)</h2>
     <?php
     $resultado = null;
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $a = (int)$_POST['a'];
-        $b = (int)$_POST['b'];
+        $a = (float) ($_POST['a'] ?? 0);
+        $b = (float) ($_POST['b'] ?? 0);
         $resultado = $a + $b;
     }
     ?>
     
     <form method="post">
-      <input name="a" type="number" placeholder="Digite A">
-      <input name="b" type="number" placeholder="Digite B">
-      <button type="submit">Somar</button>
+        <input name="a" type="number" step="any" placeholder="Digite A" required>
+        <input name="b" type="number" step="any" placeholder="Digite B" required>
+        <button type="submit">Somar</button>
     </form>
 
     <?php if ($resultado !== null): ?>
-        <p><strong>Resultado: </strong><?=$resultado?></p>
+        <p><strong>Resultado:</strong> <?= $resultado ?></p>
     <?php endif; ?>
 
 </body>

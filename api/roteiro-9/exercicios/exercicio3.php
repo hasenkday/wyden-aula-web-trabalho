@@ -11,25 +11,35 @@ Acesse o manual do PHP para consultar o funcionamento do comando `strtoupper()` 
     <title>Teste PHP</title>
 </head>
 <body>
-    <h2>Alterando String (Este também precisa de endpoint para o GET)</h2>
+    <h2>Alterando String</h2>
     
     <?php
-      // Definição e chamada de função
-      function saudacao($nome) {
-          return "Olá, $nome!";
-      }
+        function saudacao($nome) {
+            return 'Olá, ' . strtoupper($nome) . '!';
+        }
       
-      $resultado = null;
-      if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-          $a = (int)$_GET['name'];
-          $resultado = strtoupper($name);
-      }
+        $resultado = null;
+
+        if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['name'])) {
+            $nome = trim($_GET['name']);
+
+            if ($nome !== '') {
+                $resultado = saudacao($nome);
+            }
+        }
     ?>
 
     <form method="get">
-      <input name="name" type="text" placeholder="Digite um nome">
+      <input name="name" type="text" placeholder="Digite um nome" value="<?= htmlspecialchars($_GET['name'] ?? '', ENT_QUOTES, 'UTF-8') ?>" required>
       <button type="submit">Transformar em CAPS</button>
     </form>
+
+    <?php if ($resultado !== null): ?>
+        <p>
+            <strong>Resultado:</strong>
+            <?= htmlspecialchars($resultado, ENT_QUOTES, 'UTF-8') ?>
+        </p>
+    <?php endif; ?>
 
 </body>
 </html>

@@ -64,14 +64,16 @@ try {
         $path,
         $matches
     )) {
-        if ($method !== 'GET') {
-            header('Allow: GET');
+        if (!in_array($method, ['GET', 'POST'], true)) {
+            header('Allow: GET, POST');
             ApiResponse::error('Método não permitido.', 405);
             exit;
         }
 
         $tipo = $matches[1] === 'exemplo' ? 'exemplos' : 'exercicios';
-        $arquivo = __DIR__ . "/roteiro-9/{$tipo}/{$matches[1]}{$matches[2]}.php";
+
+        $arquivo = __DIR__ .
+            "/roteiro-9/{$tipo}/{$matches[1]}{$matches[2]}.php";
 
         if (!is_file($arquivo)) {
             ApiResponse::error('Página não encontrada.', 404);
